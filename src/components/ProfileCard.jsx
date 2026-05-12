@@ -189,10 +189,9 @@ export default function ProfileCard({
                 leaveRafRef.current = requestAnimationFrame(checkSettle);
             }
         };
-        if (leaveRafRef.current) cancelAnimationFrame(leaveRafRef.current);
+        if (leaveRafRef.current) cancelAnimationFrame(leaveRafRef.current);E
         leaveRafRef.current = requestAnimationFrame(checkSettle);
     }, [tiltEngine]);
-
     const handleDeviceOrientation = useCallback(
         (event) => {
             const shell = shellRef.current;
@@ -211,7 +210,6 @@ export default function ProfileCard({
         },
         [tiltEngine, mobileTiltSensitivity]
     );
-
     useEffect(() => {
         if (!enableTilt || !tiltEngine) return;
         const shell = shellRef.current;

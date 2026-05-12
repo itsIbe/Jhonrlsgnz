@@ -1,4 +1,5 @@
 import Grainient from "./Grainient";
+import ProfileImage2 from "../assets/ProfileImage2.png";
 
 const floatingBadges = [
   {
@@ -111,8 +112,8 @@ export default function Hero() {
           <div className="hero-profile-glow" />
 
           <img
-            src="/ProfileImage2.png"
-            alt="Jhon Ruel Seguenza"
+            src={ProfileImage2}
+            // alt="Jhon Ruel Seguenza"
             className="hero-profile-img"
           />
 

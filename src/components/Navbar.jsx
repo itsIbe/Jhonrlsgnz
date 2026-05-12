@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import portfolioLogo from "../assets/portfoliologo.png";
+import "../styles/styles.css";
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -48,9 +51,8 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => scrollTo("home")}>
-          Jhonrlsgnz<span className="logo-dot">.</span>
-        </div>
-
+  <img src={portfolioLogo} alt="Portfolio Logo" className="navbar-logo-img" />
+</div>
         <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
           {navLinks.map((link) => (
             <li key={link}>
