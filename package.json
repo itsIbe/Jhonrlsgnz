@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-three/fiber": "^9.6.1",
     "ogl": "^1.0.11",
     "react": "^19.2.5",

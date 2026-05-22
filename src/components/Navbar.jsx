@@ -39,6 +39,17 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 760) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const navLinks = ["Home", "About", "Skills", "Projects", "Contact"];
 
   const scrollTo = (id) => {
@@ -51,8 +62,8 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => scrollTo("home")}>
-  <img src={portfolioLogo} alt="Portfolio Logo" className="navbar-logo-img" />
-</div>
+          <img src={portfolioLogo} alt="Portfolio Logo" className="navbar-logo-img" />
+        </div>
         <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
           {navLinks.map((link) => (
             <li key={link}>
@@ -69,7 +80,12 @@ export default function Navbar() {
         <button className="btn-contact" onClick={() => scrollTo("contact")}>
           Contact Me
         </button>
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           <span></span>
           <span></span>
           <span></span>

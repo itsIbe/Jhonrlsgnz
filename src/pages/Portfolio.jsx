@@ -1,6 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import LogoLoop from "../components/LogoLoop";
 import aboutImg from "../assets/about.jpg";
+import MunicipalOrdinanceDemo from "./demos/MunicipalOrdinanceDemo";
+import TruckTrailerDriverDemo from "./demos/TruckTrailerDriverDemo";
+import SalesManagementSystem from "./demos/SalesManagementSystem";
+import SpmsDemo from "./demos/SpmsDemo";
+
+// Use Vite env vars so keys are easier to manage across environments.
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const skills = [
   {
     name: "React",
@@ -101,7 +111,7 @@ const skills = [
     level: 4,
     color: "#FF9A00",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none"> 
+      <svg viewBox="0 0 24 24" fill="none">
         <rect width="24" height="24" rx="3" fill="#330000" />
         <text x="3" y="17" fontSize="10" fontWeight="bold" fill="#FF9A00" fontFamily="Arial, sans-serif">Ai</text>
       </svg>
@@ -143,31 +153,40 @@ const skillLogos = skills.map(skill => ({
 }));
 const projects = [
   {
-    title: "Logistics Dashboard",
-    desc: "A logistics and shipment dashboard with real-time analytics and reports.",
+    title: "Truck, Trailer, and Driver Management System",
+    desc: "A system for managing trucks, trailers, and drivers with counting capacity dashboards.",
     image: null,
     color: "#1e3a5f",
     demo: "#",
-    github: "#",
+    demoType: "truck-trailer-driver",
   },
   {
-    title: "Client Management System",
-    desc: "A CRUD system for managing clients and business information.",
+    title: "Sales Management System",
+    desc: "A system for managing sales, tracking performance, and generating reports for ASM, Forecast, DCT, SFT, and EXD.",
     image: null,
     color: "#1a2e4a",
     demo: "#",
-    github: "#",
+    demoType: "sales-management",
   },
   {
-    title: "Shipment Tracker",
-    desc: "Track shipments in real-time with status updates and history logs.",
+    title: "Strategic Performance Management System",
+    desc: "A system for managing and tracking strategic performance indicators.",
     image: null,
     color: "#1e3040",
     demo: "#",
-    github: "#",
+    demoType: "spms",
+  },
+  {
+    title: "Municipal Ordinance",
+    desc: "A system for managing and tracking municipal ordinances and regulations.",
+    image: null,
+    color: "#1e3040",
+    demo: null,
+    demoType: "municipal-ordinance",
+   
   },
 ];
-function ProjectCard({ project }) {
+function ProjectCard({ project, onOpenDemo }) {
   return (
     <div className="project-card">
       <div className="project-img" style={{ background: project.color }}>
@@ -186,15 +205,23 @@ function ProjectCard({ project }) {
         <h3>{project.title}</h3>
         <p>{project.desc}</p>
         <div className="project-links">
-          <a href={project.demo} className="link-demo">
-            Live Demo <span>↗</span>
-          </a>
-          <a href={project.github} className="link-github">
+          {(["municipal-ordinance","truck-trailer-driver","sales-management","spms"].includes(project.demoType)) ? (
+            <button type="button" className="link-demo link-demo-button" onClick={() => onOpenDemo(project)}>
+              Live Demo <span>↗</span>
+            </button>
+          ) : project.demo ? (
+            <a href={project.demo} className="link-demo" target="_blank" rel="noreferrer">
+              Live Demo <span>↗</span>
+            </a>
+          ) : (
+            <span className="link-demo link-demo-disabled">Demo coming soon</span>
+          )}
+          {/* <a href={project.github} className="link-github">
             GitHub{" "}
             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
               <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
             </svg>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
@@ -207,14 +234,73 @@ export default function Portfolio() {
     subject: "",
     message: "",
   });
+  const [sending, setSending] = useState(false);
+  const [activeDemo, setActiveDemo] = useState(null);
+
+  useEffect(() => {
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.warn("EmailJS config is missing. Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY.");
+    }
+  }, []);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Message sent! (Connect to a backend to make this work)");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setSending(true);
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      alert("Email form is not configured yet. Please set EmailJS environment variables.");
+      setSending(false);
+      return;
+    }
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          to_email: "seguenzajhonruel02@gmail.com",
+          reply_to: formData.email,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        {
+          publicKey: EMAILJS_PUBLIC_KEY,
+        }
+      );
+
+      alert("✅ Message sent successfully! I'll get back to you soon.");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      const status = error?.status ? ` (status: ${error.status})` : "";
+      const reason = error?.text || error?.message || "Unknown error";
+      alert(`❌ Failed to send message${status}: ${reason}`);
+      console.error("EmailJS error:", error);
+    } finally {
+      setSending(false);
+    }
   };
+
+  const handleOpenDemo = (project) => {
+    if (project.demoType === "municipal-ordinance" || project.demoType === "truck-trailer-driver" || project.demoType === "sales-management" || project.demoType === "spms") {
+      setActiveDemo(project);
+    }
+  };
+
+  const ActiveDemoComponent = activeDemo
+    ? {
+        "municipal-ordinance": MunicipalOrdinanceDemo,
+        "truck-trailer-driver": TruckTrailerDriverDemo,
+        "sales-management": SalesManagementSystem,
+        "spms": SpmsDemo,
+      }[activeDemo.demoType]
+    : null;
+
   return (
     <main>
       {/* ── ABOUT ── */}
@@ -227,19 +313,19 @@ export default function Portfolio() {
             <p className="section-tag">ABOUT ME</p>
             <h2 className="about-heading">Building clean, scalable, and modern web apps..</h2>
             <p className="about-desc">
-              Hi, I’m Jhon — a Frontend Developer and Graphic Designer based in the Philippines, passionate about creating modern, responsive, and user-focused digital experiences. 
+              Hi, I’m Jhon — a Frontend Developer and Graphic Designer based in the Philippines, passionate about creating modern, responsive, and user-focused digital experiences.
               I specialize in building web applications, dashboards, and enterprise-style systems using technologies such as React, TypeScript, JavaScript, CSS, and modern UI/UX practices.
               <br /><br />
-              Over the years, I’ve worked on developing responsive admin dashboards, sales monitoring systems, user management modules, custom modals, advanced table settings, and interactive 
-              interfaces that focus on both performance and usability. I enjoy transforming complex workflows into clean, intuitive, and visually appealing designs while maintaining scalable 
+              Over the years, I’ve worked on developing responsive admin dashboards, sales monitoring systems, user management modules, custom modals, advanced table settings, and interactive
+              interfaces that focus on both performance and usability. I enjoy transforming complex workflows into clean, intuitive, and visually appealing designs while maintaining scalable
               and maintainable frontend architecture.
               <br /><br />
-              Aside from development, I also have experience in graphic design, branding, packaging design, and UI/UX design, working with clients from industries such as fashion, food, 
+              Aside from development, I also have experience in graphic design, branding, packaging design, and UI/UX design, working with clients from industries such as fashion, food,
               and technology. My design approach combines creativity, functionality, and attention to detail to create seamless user experiences.
               <br /><br />
-              I’m continuously learning new technologies, experimenting with modern design trends, and improving my skills in frontend engineering, responsive design, animations, 
+              I’m continuously learning new technologies, experimenting with modern design trends, and improving my skills in frontend engineering, responsive design, animations,
               glassmorphism UI, enterprise theming, and user experience optimization to keep my work innovative and impactful.
-              </p>
+            </p>
             <div className="about-stats">
               <div className="stat-item">
                 <span className="stat-icon">💼</span>
@@ -290,10 +376,11 @@ export default function Portfolio() {
         <h2 className="section-heading centered">Some of my recent work</h2>
         <div className="projects-grid">
           {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            <ProjectCard key={project.title} project={project} onOpenDemo={handleOpenDemo} />
           ))}
         </div>
       </section>
+      {ActiveDemoComponent && <ActiveDemoComponent onClose={() => setActiveDemo(null)} project={activeDemo} />}
       {/* ── CONTACT ── */}
       <section id="contact" className="contact-section">
         <div className="contact-container">
@@ -351,15 +438,15 @@ export default function Portfolio() {
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit" className="btn-send">
-              Send Message <span>✈</span>
+            <button type="submit" className="btn-send" disabled={sending}>
+              {sending ? "Sending..." : "Send Message"} <span>✈</span>
             </button>
           </form>
         </div>
       </section>
       {/* ── FOOTER ── */}
       <footer className="footer">
-        <p>© 2024 Jhon. All rights reserved.</p>
+        <p>© 2026 Jhonrlsgnz. All rights reserved.</p>
         <div className="footer-socials">
           <a href="#" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
@@ -383,3 +470,4 @@ export default function Portfolio() {
     </main>
   );
 }
+
