@@ -803,6 +803,171 @@ img {
   border-radius: 12px;
 }
 
+.project-preview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 220;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.project-preview-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 7, 14, 0.76);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.project-preview-card {
+  position: relative;
+  z-index: 1;
+  width: min(1400px, 100%);
+  height: calc(100vh - 3rem);
+  max-height: 100%;
+  background: rgba(7, 14, 30, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  animation: demoShellIn 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.project-preview-body {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  padding: 1.8rem;
+  height: 100%;
+}
+
+.preview-image-wrap {
+  min-height: 260px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-image-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.preview-placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.preview-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.preview-info h2 {
+  margin: 0;
+  font-size: clamp(2rem, 2.4vw, 2.5rem);
+}
+
+.preview-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+}
+
+.preview-extra-desc {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.preview-tech-stack {
+  margin-top: 1.25rem;
+}
+
+.preview-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.preview-stack-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.78);
+  padding: 0.72rem 1rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+}
+
+.preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.preview-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.preview-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.preview-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.42);
+  color: #fff;
+  font-size: 1.45rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.preview-close-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 880px) {
+  .project-preview-body {
+    grid-template-columns: 1fr;
+  }
+}
+
 .mockup-bar {
   height: 8px;
   background: var(--blue);

@@ -7,6 +7,7 @@ import TruckTrailerDriverDemo from "./demos/TruckTrailerDriverDemo";
 import SalesManagementSystem from "./demos/SalesManagementSystem";
 import SpmsDemo from "./demos/SpmsDemo";
 import municipalOrdinance from "../assets/municipalOrdinance.png";
+import SalesManagementSystemImage from "../assets/salesManagementSystem.png";
 
 // Use Vite env vars so keys are easier to manage across environments.
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -142,38 +143,45 @@ const projects = [
   {
     title: "Truck, Trailer, and Driver Management System",
     desc: "A system for managing trucks, trailers, and drivers with counting capacity dashboards.",
+    extraDesc: "A truck, trailer, and driver management system enables fleet managers to track vehicle availability, assign drivers, monitor maintenance schedules, and optimize routing. It includes inventory tracking, capacity planning, driver assignments, and dashboard analytics to streamline operations and ensure efficient transportation management.",
     image: null,
     color: "#1e3a5f",
+    techStack: ["React", "JavaScript", "CSS", "Fleet Tracking", "Capacity Dashboards"],
     demo: "#",
     demoType: "truck-trailer-driver",
   },
   {
     title: "Sales Management System",
     desc: "A system for managing sales, tracking performance, and generating reports for ASM, Forecast, DCT, SFT, and EXD.",
-    image: null,
+    extraDesc: "A Sales Management System centralizes sales tracking, performance monitoring, and reporting for regional teams. It supports lead tracking, revenue forecasting, sales order management, and dashboard insights to improve decision making and boost sales productivity.",
+    image: SalesManagementSystemImage,
     color: "#1a2e4a",
+    techStack: ["Google Sheets", "Google Apps Script", "Google Gspread API", "Sheets API", "Pivot Tables"],
     demo: "#",
     demoType: "sales-management",
   },
   {
     title: "Strategic Performance Management System",
     desc: "A system for managing and tracking strategic performance indicators.",
+    extraDesc: "A Strategic Performance Management System helps organizations track KPIs, align goals, and monitor progress across departments. It provides dashboards for target setting, scorecards, analytics, and reporting to support better strategy execution and business performance.",
     image: null,
     color: "#1e3040",
+    techStack: ["React", "Charting", "KPI Tracking", "Dashboard UX"],
     demo: "#",
     demoType: "spms",
   },
   {
     title: "Municipal Ordinance",
     desc: "A system for managing and tracking municipal ordinances and regulations.",
+    extraDesc: "A Municipal Ordinance System is a web-based application designed to help Local Government Units (LGUs) manage, monitor, and organize municipal ordinances and regulations digitally. The system allows users to create, review, approve, track, and archive ordinances efficiently. It includes features such as dashboard analytics, ordinance management, barangay tracking, approval workflows, reporting, notifications, and user role management. The goal of the system is to improve efficiency, reduce paperwork, enhance transparency, and simplify the monitoring of local laws and regulations within municipalities and barangays.",
     image: municipalOrdinance,
     color: "#1e3040",
+    techStack: ["React", "JavaScript", "CSS", "Responsive UI"],
     demo: null,
     demoType: "municipal-ordinance",
-
   },
 ];
-function ProjectCard({ project, onOpenDemo }) {
+function ProjectCard({ project, onOpenPreview }) {
   return (
     <div className="project-card">
       <div className="project-img" style={{ background: project.color }}>
@@ -197,8 +205,8 @@ function ProjectCard({ project, onOpenDemo }) {
         <p>{project.desc}</p>
         <div className="project-links">
           {(["municipal-ordinance", "truck-trailer-driver", "sales-management", "spms"].includes(project.demoType)) ? (
-            <button type="button" className="link-demo link-demo-button" onClick={() => onOpenDemo(project)}>
-              Live Demo <span>↗</span>
+            <button type="button" className="link-demo link-demo-button" onClick={() => onOpenPreview(project)}>
+              View <span>↗</span>
             </button>
           ) : project.demo ? (
             <a href={project.demo} className="link-demo" target="_blank" rel="noreferrer">
@@ -221,6 +229,7 @@ export default function Portfolio() {
   });
   const [sending, setSending] = useState(false);
   const [activeDemo, setActiveDemo] = useState(null);
+  const [previewProject, setPreviewProject] = useState(null);
 
   useEffect(() => {
     if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
@@ -271,10 +280,19 @@ export default function Portfolio() {
     }
   };
 
-  const handleOpenDemo = (project) => {
-    if (project.demoType === "municipal-ordinance" || project.demoType === "truck-trailer-driver" || project.demoType === "sales-management" || project.demoType === "spms") {
-      setActiveDemo(project);
+  const handleViewProject = (project) => {
+    setPreviewProject(project);
+  };
+
+  const handleStartDemo = () => {
+    if (previewProject) {
+      setActiveDemo(previewProject);
+      setPreviewProject(null);
     }
+  };
+
+  const closePreview = () => {
+    setPreviewProject(null);
   };
 
   const ActiveDemoComponent = activeDemo
@@ -361,10 +379,58 @@ export default function Portfolio() {
         <h2 className="section-heading centered">Some of my recent work</h2>
         <div className="projects-grid">
           {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} onOpenDemo={handleOpenDemo} />
+            <ProjectCard key={project.title} project={project} onOpenPreview={handleViewProject} />
           ))}
         </div>
       </section>
+      {previewProject && (
+        <div className="project-preview-modal">
+          <div className="project-preview-backdrop" onClick={closePreview} />
+          <div className="project-preview-card">
+            <button className="preview-close-button" onClick={closePreview} aria-label="Close preview">
+              ×
+            </button>
+            <div className="project-preview-body">
+              <div className="preview-image-wrap">
+                {previewProject.image ? (
+                  <img src={previewProject.image} alt={previewProject.title} />
+                ) : (
+                  <div className="preview-placeholder">Demo Preview</div>
+                )}
+              </div>
+              <div className="preview-info">
+                <p className="section-tag">PROJECT PREVIEW</p>
+                <h2>{previewProject.title}</h2>
+                {previewProject.extraDesc ? (
+                  <p className="preview-extra-desc">{previewProject.extraDesc}</p>
+                ) : (
+                  <p>{previewProject.desc}</p>
+                )}
+                {previewProject.techStack?.length > 0 && (
+                  <div className="preview-tech-stack">
+                    <p className="section-tag">Tech Stack</p>
+                    <div className="preview-stack-list">
+                      {previewProject.techStack.map((tag) => (
+                        <span key={tag} className="preview-stack-item">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                <div className="preview-actions">
+                  <button type="button" className="link-demo link-demo-button" onClick={handleStartDemo}>
+                    <span role="img" aria-label="eye">👁</span> Live Demo
+                  </button>
+                  <button type="button" className="preview-secondary" onClick={closePreview}>
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {ActiveDemoComponent && <ActiveDemoComponent onClose={() => setActiveDemo(null)} project={activeDemo} />}
       {/* ── CONTACT ── */}
       <section id="contact" className="contact-section">
