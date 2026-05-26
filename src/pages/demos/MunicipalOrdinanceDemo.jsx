@@ -37,6 +37,7 @@ const DASHBOARD_CSS = `
   flex-direction: column;
   height: 100%;
   overflow-y: auto;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 .mos-dash-sidebar-brand {
   padding: .95rem 1rem .75rem;
@@ -152,6 +153,29 @@ const DASHBOARD_CSS = `
 .mos-dash-notif-dot {
   width: 6px; height: 6px; background: #fff; border-radius: 50%;
   position: absolute; top: 5px; right: 5px; border: 1.5px solid #DB1A1A;
+}
+.mos-dash-hamburger-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+.mos-dash-hamburger-btn:hover {
+  background: rgba(255,255,255,.12);
+}
+.mos-dash-sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  border: none;
+  z-index: 11;
 }
 .mos-dash-btn-sm {
   background: #2C687B; color: #fff; border: none;
@@ -366,6 +390,169 @@ const DASHBOARD_CSS = `
   animation: dashSlideUp .22s ease; pointer-events: none;
   box-shadow: 0 4px 16px rgba(0,0,0,.25);
 }
+
+@media (max-width: 1100px) {
+  .mos-dash-layout {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .mos-dash-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    max-width: 85vw;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    height: 100%;
+    z-index: 12;
+    border-right: 1px solid #d8e2ea;
+    background: #fff;
+    box-shadow: 12px 0 40px rgba(0,0,0,.12);
+  }
+
+  .mos-dash-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mos-dash-sidebar-user {
+    padding: .85rem 1rem 1rem;
+  }
+
+  .mos-dash-topbar {
+    position: relative;
+    padding: .75rem 1rem;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+
+  .mos-dash-hamburger-btn {
+    display: inline-flex;
+  }
+
+  .mos-dash-topbar h1 {
+    flex: 1 1 100%;
+  }
+
+  .mos-dash-topbar-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+
+  .mos-dash-search {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .mos-dash-search input {
+    width: 100%;
+  }
+}
+
+  .mos-dash-topbar {
+    padding: .75rem 1rem;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+
+  .mos-dash-topbar h1 {
+    flex: 1 1 100%;
+  }
+
+  .mos-dash-topbar-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+
+  .mos-dash-search {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .mos-dash-search input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .mos-dash-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mos-dash-content-row,
+  .mos-dash-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .mos-dash-pending-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mos-dash-topbar-actions {
+    align-items: stretch;
+  }
+
+  .mos-dash-btn-sm,
+  .mos-dash-btn-sm-outline,
+  .mos-dash-notif-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .mos-dash-topbar {
+    padding: .7rem .85rem;
+    height: auto;
+  }
+
+  .mos-dash-topbar-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mos-dash-search {
+    padding: .4rem .55rem;
+  }
+
+  .mos-dash-search input {
+    width: 100%;
+  }
+
+  .mos-dash-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mos-dash-sidebar {
+    padding-bottom: 1rem;
+  }
+
+  .mos-dash-nav-item {
+    padding: .75rem .85rem;
+  }
+
+  .mos-dash-metric-card,
+  .mos-dash-panel-body,
+  .mos-dash-form-field input,
+  .mos-dash-form-field select,
+  .mos-dash-form-field textarea {
+    font-size: .9rem;
+  }
+
+  .mos-dash-toast {
+    right: .75rem;
+    left: .75rem;
+    bottom: .75rem;
+  }
+}
+
 @keyframes dashSlideUp {
   from { opacity: 0; transform: translateY(7px); }
   to   { opacity: 1; transform: translateY(0);   }
@@ -373,74 +560,78 @@ const DASHBOARD_CSS = `
 `;
 
 // ─── Chart Data ──────────────────────────────────────────────────────────────
-const CHART_MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const CHART_VALS   = [18, 24, 15, 32, 28, 41, 36, 29, 44, 38, 52, 47];
-const CHART_MAX    = Math.max(...CHART_VALS);
+const CHART_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const CHART_VALS = [18, 24, 15, 32, 28, 41, 36, 29, 44, 38, 52, 47];
+const CHART_MAX = Math.max(...CHART_VALS);
 
 // ─── Initial Pending Data ────────────────────────────────────────────────────
 const INITIAL_PENDING = [
-    { id:1, num:"#2025-048", title:"Noise Control Regulation",         loc:"Aurora · Baler · Centro",                     date:"Jan 16, 2025", author:"Councilor Reyes",   urgent:false, status:"pending" },
-    { id:2, num:"#2025-031", title:"Road Safety & Speed Limits",       loc:"Nueva Ecija · Cabanatuan City · Aduas Centro",date:"Jan 5, 2025",  author:"Mayor Dela Cruz",  urgent:false, status:"pending" },
-    { id:3, num:"#2025-043", title:"Business Permit Processing Reform",loc:"Tarlac · Capas · San Miguel",                date:"Jan 13, 2025", author:"Councilor Santos",  urgent:true,  status:"pending" },
-    { id:4, num:"#2025-052", title:"Public Market Sanitation Code",    loc:"Bulacan · Meycauayan · Malhacan",             date:"Jan 17, 2025", author:"Councilor Garcia",  urgent:false, status:"pending" },
-    { id:5, num:"#2025-055", title:"Youth Sports Development Act",     loc:"Zambales · Olongapo City · West Bajac-Bajac", date:"Jan 18, 2025", author:"Councilor Lim",     urgent:false, status:"pending" },
+    { id: 1, num: "#2025-048", title: "Noise Control Regulation", loc: "Aurora · Baler · Centro", date: "Jan 16, 2025", author: "Councilor Reyes", urgent: false, status: "pending" },
+    { id: 2, num: "#2025-031", title: "Road Safety & Speed Limits", loc: "Nueva Ecija · Cabanatuan City · Aduas Centro", date: "Jan 5, 2025", author: "Mayor Dela Cruz", urgent: false, status: "pending" },
+    { id: 3, num: "#2025-043", title: "Business Permit Processing Reform", loc: "Tarlac · Capas · San Miguel", date: "Jan 13, 2025", author: "Councilor Santos", urgent: true, status: "pending" },
+    { id: 4, num: "#2025-052", title: "Public Market Sanitation Code", loc: "Bulacan · Meycauayan · Malhacan", date: "Jan 17, 2025", author: "Councilor Garcia", urgent: false, status: "pending" },
+    { id: 5, num: "#2025-055", title: "Youth Sports Development Act", loc: "Zambales · Olongapo City · West Bajac-Bajac", date: "Jan 18, 2025", author: "Councilor Lim", urgent: false, status: "pending" },
 ];
 
 const SECTION_TITLES = {
-    dashboard:      "Dashboard Overview",
-    tracking:       "LGU Tracking",
-    ordinances:     "All Ordinances",
-    "add-ordinance":"Add New Ordinance",
-    pending:        "Pending Ordinances",
-    approved:       "Approved Ordinances",
-    reports:        "Analytics & Reports",
-    barangay:       "Barangay Monitor",
-    settings:       "Settings",
-    users:          "Users & Roles",
+    dashboard: "Dashboard Overview",
+    tracking: "LGU Tracking",
+    ordinances: "All Ordinances",
+    "add-ordinance": "Add New Ordinance",
+    pending: "Pending Ordinances",
+    approved: "Approved Ordinances",
+    reports: "Analytics & Reports",
+    barangay: "Barangay Monitor",
+    settings: "Settings",
+    users: "Users & Roles",
 };
 
 // ─── Dashboard Component ─────────────────────────────────────────────────────
 function MosDashboard({ onLogout, username }) {
     const [section, setSection] = useState("dashboard");
     const [pending, setPending] = useState(INITIAL_PENDING);
-    const [toast,   setToast  ] = useState({ visible:false, msg:"" });
+    const [toast, setToast] = useState({ visible: false, msg: "" });
+    const [sidebarOpen, setSidebarOpen] = useState(false);
     const [ordForm, setOrdForm] = useState({
-        number:"", date:"", title:"", province:"", city:"",
-        barangay:"", street:"", category:"Environment", author:"", desc:"", remarks:"",
+        number: "", date: "", title: "", province: "", city: "",
+        barangay: "", street: "", category: "Environment", author: "", desc: "", remarks: "",
     });
     const toastTimerRef = useRef(null);
 
     // Inject Tabler Icons if not already present
     useEffect(() => {
         if (!document.getElementById("tabler-icons-dash")) {
-            const link  = document.createElement("link");
-            link.id     = "tabler-icons-dash";
-            link.rel    = "stylesheet";
-            link.href   = "https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css";
+            const link = document.createElement("link");
+            link.id = "tabler-icons-dash";
+            link.rel = "stylesheet";
+            link.href = "https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css";
             document.head.appendChild(link);
         }
     }, []);
 
     const showToast = (msg) => {
         if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
-        setToast({ visible:true, msg });
-        toastTimerRef.current = setTimeout(() => setToast(t => ({ ...t, visible:false })), 3000);
+        setToast({ visible: true, msg });
+        toastTimerRef.current = setTimeout(() => setToast(t => ({ ...t, visible: false })), 3000);
     };
 
-    const nav = (id) => setSection(id);
+    const nav = (id) => {
+        setSection(id);
+        setSidebarOpen(false);
+    };
 
     const approveOrd = (id) => {
-        setPending(p => p.map(x => x.id === id ? { ...x, status:"approved" } : x));
+        setPending(p => p.map(x => x.id === id ? { ...x, status: "approved" } : x));
         showToast("Ordinance approved successfully");
     };
     const rejectOrd = (id) => {
-        setPending(p => p.map(x => x.id === id ? { ...x, status:"rejected" } : x));
+        setPending(p => p.map(x => x.id === id ? { ...x, status: "rejected" } : x));
         showToast("Ordinance returned for revision");
     };
     const submitOrd = () => {
         if (!ordForm.number || !ordForm.title) { showToast("Please fill in Ordinance Number and Title"); return; }
         showToast("Ordinance submitted for review!");
-        setOrdForm({ number:"", date:"", title:"", province:"", city:"", barangay:"", street:"", category:"Environment", author:"", desc:"", remarks:"" });
+        setOrdForm({ number: "", date: "", title: "", province: "", city: "", barangay: "", street: "", category: "Environment", author: "", desc: "", remarks: "" });
     };
 
     const userInitials = username ? username.slice(0, 2).toUpperCase() : "AD";
@@ -465,7 +656,7 @@ function MosDashboard({ onLogout, username }) {
             <div className="mos-dash-layout">
 
                 {/* ── Sidebar ── */}
-                <aside className="mos-dash-sidebar">
+                <aside className={`mos-dash-sidebar ${sidebarOpen ? "open" : ""}`}>
                     <div className="mos-dash-sidebar-brand">
                         <div className="mos-dash-brand-name">MUNICIPAL ORDINANCE</div>
                         <div className="mos-dash-brand-sub">LGU Management System</div>
@@ -473,21 +664,21 @@ function MosDashboard({ onLogout, username }) {
                     <nav className="mos-dash-nav">
                         <div className="mos-dash-nav-section">
                             <div className="mos-dash-nav-section-title">Main</div>
-                            <NavItem id="dashboard"   icon="layout-dashboard"  label="Dashboard" />
-                            <NavItem id="tracking"    icon="map-pin"           label="LGU Tracking" />
-                            <NavItem id="ordinances"  icon="file-text"         label="All Ordinances" />
+                            <NavItem id="dashboard" icon="layout-dashboard" label="Dashboard" />
+                            <NavItem id="tracking" icon="map-pin" label="LGU Tracking" />
+                            <NavItem id="ordinances" icon="file-text" label="All Ordinances" />
                         </div>
                         <div className="mos-dash-nav-section">
                             <div className="mos-dash-nav-section-title">Actions</div>
-                            <NavItem id="add-ordinance" icon="circle-plus"  label="Add Ordinance" />
-                            <NavItem id="pending"       icon="clock"        label="Pending" badge={pendingCount || null} />
-                            <NavItem id="approved"      icon="circle-check" label="Approved" badge="48" badgeColor="green" />
+                            <NavItem id="add-ordinance" icon="circle-plus" label="Add Ordinance" />
+                            <NavItem id="pending" icon="clock" label="Pending" badge={pendingCount || null} />
+                            <NavItem id="approved" icon="circle-check" label="Approved" badge="48" badgeColor="green" />
                         </div>
                         <div className="mos-dash-nav-section">
                             <div className="mos-dash-nav-section-title">Reports</div>
-                            <NavItem id="reports"   icon="chart-bar"          label="Analytics & Reports" />
-                            <NavItem id="barangay"  icon="building-community" label="Barangay Monitor" />
-                            <NavItem id="settings"  icon="settings"           label="Settings" />
+                            <NavItem id="reports" icon="chart-bar" label="Analytics & Reports" />
+                            <NavItem id="barangay" icon="building-community" label="Barangay Monitor" />
+                            <NavItem id="settings" icon="settings" label="Settings" />
                         </div>
                         <div className="mos-dash-nav-section">
                             <div className="mos-dash-nav-section-title">Admin</div>
@@ -505,10 +696,26 @@ function MosDashboard({ onLogout, username }) {
                         </div>
                     </div>
                 </aside>
+                {sidebarOpen && (
+                    <button
+                        type="button"
+                        className="mos-dash-sidebar-backdrop"
+                        onClick={() => setSidebarOpen(false)}
+                        aria-label="Close navigation"
+                    />
+                )}
 
                 {/* ── Main ── */}
                 <main className="mos-dash-main">
                     <div className="mos-dash-topbar">
+                        <button
+                            type="button"
+                            className="mos-dash-hamburger-btn"
+                            onClick={() => setSidebarOpen(prev => !prev)}
+                            aria-label="Toggle navigation"
+                        >
+                            <i className="ti ti-menu-2" />
+                        </button>
                         <h1>{SECTION_TITLES[section] || "Dashboard"}</h1>
                         <div className="mos-dash-topbar-actions">
                             <div className="mos-dash-search">
@@ -531,10 +738,10 @@ function MosDashboard({ onLogout, username }) {
                         <div className={`mos-dash-page-section ${section === "dashboard" ? "active" : ""}`}>
                             <div className="mos-dash-metrics-grid">
                                 {[
-                                    { label:"Total Ordinances",   icon:"file-text",          value:"3,240", change:"↑ 12% this month",    type:"up"      },
-                                    { label:"Pending Review",     icon:"clock",               value:"5",     change:"Needs attention",      type:"warn"    },
-                                    { label:"Approved",           icon:"circle-check",        value:"48",    change:"↑ 8% vs last mo.",     type:"up"      },
-                                    { label:"Active Barangays",   icon:"building-community",  value:"142",   change:"Across 7 provinces",   type:"neutral" },
+                                    { label: "Total Ordinances", icon: "file-text", value: "3,240", change: "↑ 12% this month", type: "up" },
+                                    { label: "Pending Review", icon: "clock", value: "5", change: "Needs attention", type: "warn" },
+                                    { label: "Approved", icon: "circle-check", value: "48", change: "↑ 8% vs last mo.", type: "up" },
+                                    { label: "Active Barangays", icon: "building-community", value: "142", change: "Across 7 provinces", type: "neutral" },
                                 ].map(m => (
                                     <div className="mos-dash-metric-card" key={m.label}>
                                         <div className="mos-dash-metric-label"><i className={`ti ti-${m.icon}`} /> {m.label}</div>
@@ -555,7 +762,7 @@ function MosDashboard({ onLogout, username }) {
                                             {CHART_VALS.map((v, i) => (
                                                 <div className="mos-dash-bar-wrap" key={i}>
                                                     <div className="mos-dash-bar-val">{v}</div>
-                                                    <div className="mos-dash-bar" style={{ height:`${Math.round((v / CHART_MAX) * 78)}px` }} title={`${CHART_MONTHS[i]}: ${v}`} />
+                                                    <div className="mos-dash-bar" style={{ height: `${Math.round((v / CHART_MAX) * 78)}px` }} title={`${CHART_MONTHS[i]}: ${v}`} />
                                                     <div className="mos-dash-bar-label">{CHART_MONTHS[i]}</div>
                                                 </div>
                                             ))}
@@ -571,11 +778,11 @@ function MosDashboard({ onLogout, username }) {
                                     <div className="mos-dash-panel-body">
                                         <div className="mos-dash-activity-list">
                                             {[
-                                                { dot:"green", text:"Ordinance #2025-047 approved by Mayor Santos",              time:"10 minutes ago · Pampanga" },
-                                                { dot:"amber", text:"Ordinance #2025-048 submitted for review — Noise Control",  time:"1 hour ago · Aurora"       },
-                                                { dot:"blue",  text:"New barangay Sto. Niño added to Bulacan LGU",              time:"2 hours ago"                },
-                                                { dot:"red",   text:"Ordinance #2025-039 returned for revision",                 time:"Yesterday · Zambales"       },
-                                                { dot:"green", text:"5 ordinances batch-approved for Tarlac LGU",               time:"Yesterday"                  },
+                                                { dot: "green", text: "Ordinance #2025-047 approved by Mayor Santos", time: "10 minutes ago · Pampanga" },
+                                                { dot: "amber", text: "Ordinance #2025-048 submitted for review — Noise Control", time: "1 hour ago · Aurora" },
+                                                { dot: "blue", text: "New barangay Sto. Niño added to Bulacan LGU", time: "2 hours ago" },
+                                                { dot: "red", text: "Ordinance #2025-039 returned for revision", time: "Yesterday · Zambales" },
+                                                { dot: "green", text: "5 ordinances batch-approved for Tarlac LGU", time: "Yesterday" },
                                             ].map((a, i) => (
                                                 <div className="mos-dash-activity-item" key={i}>
                                                     <div className={`mos-dash-act-dot ${a.dot}`} />
@@ -598,16 +805,16 @@ function MosDashboard({ onLogout, username }) {
                                             <i className="ti ti-external-link" /> View All
                                         </button>
                                     </div>
-                                    <div className="mos-dash-panel-body" style={{ padding:0 }}>
+                                    <div className="mos-dash-panel-body" style={{ padding: 0 }}>
                                         <table className="mos-dash-table">
                                             <thead><tr><th>No.</th><th>Title</th><th>Province</th><th>Barangay</th><th>Date Filed</th><th>Status</th></tr></thead>
                                             <tbody>
                                                 {[
-                                                    { num:"#2025-047", title:"Solid Waste Management Act",   prov:"Pampanga", brgy:"San Fernando", date:"Jan 15, 2025", status:"approved" },
-                                                    { num:"#2025-048", title:"Noise Control Regulation",     prov:"Aurora",   brgy:"Baler",        date:"Jan 16, 2025", status:"pending"  },
-                                                    { num:"#2025-039", title:"Market Vendor Code of Conduct",prov:"Zambales", brgy:"Olongapo City", date:"Jan 10, 2025", status:"rejected" },
-                                                    { num:"#2025-041", title:"Anti-Littering Ordinance",     prov:"Bulacan",  brgy:"Malolos",       date:"Jan 12, 2025", status:"approved" },
-                                                    { num:"#2025-043", title:"Business Permit Processing",   prov:"Tarlac",   brgy:"Capas",         date:"Jan 13, 2025", status:"draft"    },
+                                                    { num: "#2025-047", title: "Solid Waste Management Act", prov: "Pampanga", brgy: "San Fernando", date: "Jan 15, 2025", status: "approved" },
+                                                    { num: "#2025-048", title: "Noise Control Regulation", prov: "Aurora", brgy: "Baler", date: "Jan 16, 2025", status: "pending" },
+                                                    { num: "#2025-039", title: "Market Vendor Code of Conduct", prov: "Zambales", brgy: "Olongapo City", date: "Jan 10, 2025", status: "rejected" },
+                                                    { num: "#2025-041", title: "Anti-Littering Ordinance", prov: "Bulacan", brgy: "Malolos", date: "Jan 12, 2025", status: "approved" },
+                                                    { num: "#2025-043", title: "Business Permit Processing", prov: "Tarlac", brgy: "Capas", date: "Jan 13, 2025", status: "draft" },
                                                 ].map(r => (
                                                     <tr key={r.num}>
                                                         <td><strong>{r.num}</strong></td>
@@ -615,7 +822,7 @@ function MosDashboard({ onLogout, username }) {
                                                         <td>
                                                             <span className={`mos-dash-badge ${r.status}`}>
                                                                 {r.status === "approved" && <i className="ti ti-check" />}
-                                                                {r.status === "pending"  && <i className="ti ti-clock" />}
+                                                                {r.status === "pending" && <i className="ti ti-clock" />}
                                                                 {r.status === "rejected" && <i className="ti ti-x" />}
                                                                 {r.status.charAt(0).toUpperCase() + r.status.slice(1)}
                                                             </span>
@@ -641,13 +848,13 @@ function MosDashboard({ onLogout, username }) {
                                     <div className="mos-dash-panel-body">
                                         <div className="mos-dash-lgu-list">
                                             {[
-                                                { name:"Pampanga",    sub:"22 municipalities · 592 barangays", pct:92 },
-                                                { name:"Bulacan",     sub:"21 municipalities · 569 barangays", pct:85 },
-                                                { name:"Nueva Ecija", sub:"27 municipalities · 845 barangays", pct:78 },
-                                                { name:"Tarlac",      sub:"17 municipalities · 511 barangays", pct:88 },
-                                                { name:"Zambales",    sub:"13 municipalities · 237 barangays", pct:71 },
-                                                { name:"Bataan",      sub:"11 municipalities · 237 barangays", pct:82 },
-                                                { name:"Aurora",      sub:"8 municipalities · 143 barangays",  pct:66 },
+                                                { name: "Pampanga", sub: "22 municipalities · 592 barangays", pct: 92 },
+                                                { name: "Bulacan", sub: "21 municipalities · 569 barangays", pct: 85 },
+                                                { name: "Nueva Ecija", sub: "27 municipalities · 845 barangays", pct: 78 },
+                                                { name: "Tarlac", sub: "17 municipalities · 511 barangays", pct: 88 },
+                                                { name: "Zambales", sub: "13 municipalities · 237 barangays", pct: 71 },
+                                                { name: "Bataan", sub: "11 municipalities · 237 barangays", pct: 82 },
+                                                { name: "Aurora", sub: "8 municipalities · 143 barangays", pct: 66 },
                                             ].map(p => (
                                                 <div className="mos-dash-lgu-item" key={p.name}>
                                                     <div className="mos-dash-lgu-icon"><i className="ti ti-map-2" /></div>
@@ -655,7 +862,7 @@ function MosDashboard({ onLogout, username }) {
                                                         <div className="mos-dash-lgu-name">{p.name}</div>
                                                         <div className="mos-dash-lgu-sub">{p.sub}</div>
                                                         <div className="mos-dash-progress-bar">
-                                                            <div className="mos-dash-progress-fill" style={{ width:`${p.pct}%` }} />
+                                                            <div className="mos-dash-progress-fill" style={{ width: `${p.pct}%` }} />
                                                         </div>
                                                     </div>
                                                     <div className="mos-dash-lgu-count">{p.pct}%</div>
@@ -671,17 +878,17 @@ function MosDashboard({ onLogout, username }) {
                                             <option>San Fernando</option><option>Angeles City</option><option>Mabalacat</option>
                                         </select>
                                     </div>
-                                    <div className="mos-dash-panel-body" style={{ padding:0 }}>
+                                    <div className="mos-dash-panel-body" style={{ padding: 0 }}>
                                         <table className="mos-dash-table">
                                             <thead><tr><th>Barangay</th><th>Street/Sitio</th><th>Ordinances</th><th>Compliance</th></tr></thead>
                                             <tbody>
                                                 {[
-                                                    { brgy:"Sto. Rosario", street:"MacArthur Hwy",      ords:14, comp:"High", cls:"approved" },
-                                                    { brgy:"San Jose",     street:"Del Pilar St.",       ords:9,  comp:"High", cls:"approved" },
-                                                    { brgy:"Dolores",      street:"Olongapo-Gapan Rd.",  ords:7,  comp:"Mid",  cls:"pending"  },
-                                                    { brgy:"Sta. Lucia",   street:"Jose Abad Santos",    ords:5,  comp:"Mid",  cls:"pending"  },
-                                                    { brgy:"Del Carmen",   street:"Sindalan Rd.",        ords:3,  comp:"Low",  cls:"rejected" },
-                                                    { brgy:"Lourdes",      street:"Fernandez Blvd.",     ords:11, comp:"High", cls:"approved" },
+                                                    { brgy: "Sto. Rosario", street: "MacArthur Hwy", ords: 14, comp: "High", cls: "approved" },
+                                                    { brgy: "San Jose", street: "Del Pilar St.", ords: 9, comp: "High", cls: "approved" },
+                                                    { brgy: "Dolores", street: "Olongapo-Gapan Rd.", ords: 7, comp: "Mid", cls: "pending" },
+                                                    { brgy: "Sta. Lucia", street: "Jose Abad Santos", ords: 5, comp: "Mid", cls: "pending" },
+                                                    { brgy: "Del Carmen", street: "Sindalan Rd.", ords: 3, comp: "Low", cls: "rejected" },
+                                                    { brgy: "Lourdes", street: "Fernandez Blvd.", ords: 11, comp: "High", cls: "approved" },
                                                 ].map(r => (
                                                     <tr key={r.brgy}>
                                                         <td>{r.brgy}</td><td>{r.street}</td><td>{r.ords}</td>
@@ -697,27 +904,27 @@ function MosDashboard({ onLogout, username }) {
 
                         {/* ── ALL ORDINANCES ── */}
                         <div className={`mos-dash-page-section ${section === "ordinances" ? "active" : ""}`}>
-                            <div className="mos-dash-page-header" style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+                            <div className="mos-dash-page-header" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                                 <div><h2>All Ordinances</h2><p>Complete registry of municipal ordinances</p></div>
-                                <div style={{ display:"flex", gap:".5rem" }}>
+                                <div style={{ display: "flex", gap: ".5rem" }}>
                                     <select className="mos-dash-filter"><option>All Provinces</option><option>Pampanga</option><option>Bulacan</option><option>Aurora</option></select>
                                     <select className="mos-dash-filter"><option>All Status</option><option>Approved</option><option>Pending</option><option>Draft</option></select>
                                 </div>
                             </div>
                             <div className="mos-dash-panel">
-                                <div className="mos-dash-panel-body" style={{ padding:0 }}>
+                                <div className="mos-dash-panel-body" style={{ padding: 0 }}>
                                     <table className="mos-dash-table">
                                         <thead><tr><th>No.</th><th>Title</th><th>Province</th><th>City/Muni.</th><th>Barangay</th><th>Category</th><th>Filed</th><th>Status</th></tr></thead>
                                         <tbody>
                                             {[
-                                                { num:"#2025-047", title:"Solid Waste Management Act",    prov:"Pampanga",    city:"San Fernando City", brgy:"Sto. Rosario", cat:"Environment", catCls:"env",       filed:"Jan 15", status:"approved" },
-                                                { num:"#2025-048", title:"Noise Control Regulation",      prov:"Aurora",      city:"Baler",             brgy:"Centro",       cat:"Public Order",catCls:"order",     filed:"Jan 16", status:"pending"  },
-                                                { num:"#2025-046", title:"Anti-Littering Ordinance",      prov:"Bulacan",     city:"Malolos City",      brgy:"Cofradia",     cat:"Environment", catCls:"env",       filed:"Jan 14", status:"approved" },
-                                                { num:"#2025-043", title:"Business Permit Processing",    prov:"Tarlac",      city:"Capas",             brgy:"San Miguel",   cat:"Commerce",    catCls:"commerce",  filed:"Jan 13", status:"draft"    },
-                                                { num:"#2025-039", title:"Market Vendor Code of Conduct", prov:"Zambales",    city:"Olongapo City",     brgy:"East Tapinac", cat:"Commerce",    catCls:"commerce",  filed:"Jan 10", status:"rejected" },
-                                                { num:"#2025-035", title:"Senior Citizen Priority Lane",  prov:"Bataan",      city:"Balanga City",      brgy:"Poblacion",    cat:"Welfare",     catCls:"welfare",   filed:"Jan 8",  status:"approved" },
-                                                { num:"#2025-031", title:"Road Safety & Speed Limits",    prov:"Nueva Ecija", city:"Cabanatuan City",   brgy:"Aduas Centro", cat:"Transport",   catCls:"transport", filed:"Jan 5",  status:"pending"  },
-                                                { num:"#2025-028", title:"Animal Control Ordinance",      prov:"Pampanga",    city:"Angeles City",      brgy:"Balibago",     cat:"Environment", catCls:"env",       filed:"Jan 3",  status:"approved" },
+                                                { num: "#2025-047", title: "Solid Waste Management Act", prov: "Pampanga", city: "San Fernando City", brgy: "Sto. Rosario", cat: "Environment", catCls: "env", filed: "Jan 15", status: "approved" },
+                                                { num: "#2025-048", title: "Noise Control Regulation", prov: "Aurora", city: "Baler", brgy: "Centro", cat: "Public Order", catCls: "order", filed: "Jan 16", status: "pending" },
+                                                { num: "#2025-046", title: "Anti-Littering Ordinance", prov: "Bulacan", city: "Malolos City", brgy: "Cofradia", cat: "Environment", catCls: "env", filed: "Jan 14", status: "approved" },
+                                                { num: "#2025-043", title: "Business Permit Processing", prov: "Tarlac", city: "Capas", brgy: "San Miguel", cat: "Commerce", catCls: "commerce", filed: "Jan 13", status: "draft" },
+                                                { num: "#2025-039", title: "Market Vendor Code of Conduct", prov: "Zambales", city: "Olongapo City", brgy: "East Tapinac", cat: "Commerce", catCls: "commerce", filed: "Jan 10", status: "rejected" },
+                                                { num: "#2025-035", title: "Senior Citizen Priority Lane", prov: "Bataan", city: "Balanga City", brgy: "Poblacion", cat: "Welfare", catCls: "welfare", filed: "Jan 8", status: "approved" },
+                                                { num: "#2025-031", title: "Road Safety & Speed Limits", prov: "Nueva Ecija", city: "Cabanatuan City", brgy: "Aduas Centro", cat: "Transport", catCls: "transport", filed: "Jan 5", status: "pending" },
+                                                { num: "#2025-028", title: "Animal Control Ordinance", prov: "Pampanga", city: "Angeles City", brgy: "Balibago", cat: "Environment", catCls: "env", filed: "Jan 3", status: "approved" },
                                             ].map(r => (
                                                 <tr key={r.num}>
                                                     <td><strong>{r.num}</strong></td>
@@ -739,77 +946,77 @@ function MosDashboard({ onLogout, username }) {
                                 <h2>Add New Ordinance</h2>
                                 <p>Submit a new ordinance for review and approval</p>
                             </div>
-                            <div className="mos-dash-panel" style={{ maxWidth:700 }}>
+                            <div className="mos-dash-panel" style={{ maxWidth: 700 }}>
                                 <div className="mos-dash-panel-body">
                                     <div className="mos-dash-form-row">
                                         <div className="mos-dash-form-field">
                                             <label>Ordinance Number</label>
                                             <input type="text" placeholder="e.g. 2025-049" value={ordForm.number}
-                                                onChange={e => setOrdForm(f => ({ ...f, number:e.target.value }))} />
+                                                onChange={e => setOrdForm(f => ({ ...f, number: e.target.value }))} />
                                         </div>
                                         <div className="mos-dash-form-field">
                                             <label>Date Filed</label>
                                             <input type="date" value={ordForm.date}
-                                                onChange={e => setOrdForm(f => ({ ...f, date:e.target.value }))} />
+                                                onChange={e => setOrdForm(f => ({ ...f, date: e.target.value }))} />
                                         </div>
                                     </div>
                                     <div className="mos-dash-form-field">
                                         <label>Title / Short Description</label>
                                         <input type="text" placeholder="Enter ordinance title..." value={ordForm.title}
-                                            onChange={e => setOrdForm(f => ({ ...f, title:e.target.value }))} />
+                                            onChange={e => setOrdForm(f => ({ ...f, title: e.target.value }))} />
                                     </div>
                                     <div className="mos-dash-form-row">
                                         <div className="mos-dash-form-field">
                                             <label>Province</label>
-                                            <select value={ordForm.province} onChange={e => setOrdForm(f => ({ ...f, province:e.target.value }))}>
+                                            <select value={ordForm.province} onChange={e => setOrdForm(f => ({ ...f, province: e.target.value }))}>
                                                 <option value="">Select province...</option>
-                                                {["Aurora","Bataan","Bulacan","Nueva Ecija","Pampanga","Tarlac","Zambales"].map(p => <option key={p}>{p}</option>)}
+                                                {["Aurora", "Bataan", "Bulacan", "Nueva Ecija", "Pampanga", "Tarlac", "Zambales"].map(p => <option key={p}>{p}</option>)}
                                             </select>
                                         </div>
                                         <div className="mos-dash-form-field">
                                             <label>City / Municipality</label>
                                             <input type="text" placeholder="Enter city or municipality" value={ordForm.city}
-                                                onChange={e => setOrdForm(f => ({ ...f, city:e.target.value }))} />
+                                                onChange={e => setOrdForm(f => ({ ...f, city: e.target.value }))} />
                                         </div>
                                     </div>
                                     <div className="mos-dash-form-row">
                                         <div className="mos-dash-form-field">
                                             <label>Barangay</label>
                                             <input type="text" placeholder="Enter barangay name" value={ordForm.barangay}
-                                                onChange={e => setOrdForm(f => ({ ...f, barangay:e.target.value }))} />
+                                                onChange={e => setOrdForm(f => ({ ...f, barangay: e.target.value }))} />
                                         </div>
                                         <div className="mos-dash-form-field">
                                             <label>Street / Sitio</label>
                                             <input type="text" placeholder="Enter street or sitio" value={ordForm.street}
-                                                onChange={e => setOrdForm(f => ({ ...f, street:e.target.value }))} />
+                                                onChange={e => setOrdForm(f => ({ ...f, street: e.target.value }))} />
                                         </div>
                                     </div>
                                     <div className="mos-dash-form-row">
                                         <div className="mos-dash-form-field">
                                             <label>Category</label>
-                                            <select value={ordForm.category} onChange={e => setOrdForm(f => ({ ...f, category:e.target.value }))}>
-                                                {["Environment","Public Order","Commerce","Transport","Welfare","Health","Education","Other"].map(c => <option key={c}>{c}</option>)}
+                                            <select value={ordForm.category} onChange={e => setOrdForm(f => ({ ...f, category: e.target.value }))}>
+                                                {["Environment", "Public Order", "Commerce", "Transport", "Welfare", "Health", "Education", "Other"].map(c => <option key={c}>{c}</option>)}
                                             </select>
                                         </div>
                                         <div className="mos-dash-form-field">
                                             <label>Author / Sponsor</label>
                                             <input type="text" placeholder="Councilor / Mayor name" value={ordForm.author}
-                                                onChange={e => setOrdForm(f => ({ ...f, author:e.target.value }))} />
+                                                onChange={e => setOrdForm(f => ({ ...f, author: e.target.value }))} />
                                         </div>
                                     </div>
                                     <div className="mos-dash-form-field">
                                         <label>Full Text / Description</label>
                                         <textarea placeholder="Enter the full text or description of the ordinance..." value={ordForm.desc}
-                                            onChange={e => setOrdForm(f => ({ ...f, desc:e.target.value }))} style={{ minHeight:95 }} />
+                                            onChange={e => setOrdForm(f => ({ ...f, desc: e.target.value }))} style={{ minHeight: 95 }} />
                                     </div>
                                     <div className="mos-dash-form-field">
                                         <label>Remarks / Notes</label>
                                         <textarea placeholder="Optional remarks..." value={ordForm.remarks}
-                                            onChange={e => setOrdForm(f => ({ ...f, remarks:e.target.value }))} style={{ minHeight:52 }} />
+                                            onChange={e => setOrdForm(f => ({ ...f, remarks: e.target.value }))} style={{ minHeight: 52 }} />
                                     </div>
                                     <div className="mos-dash-form-actions">
                                         <button type="button" className="mos-dash-btn-sm-outline"
-                                            onClick={() => setOrdForm({ number:"", date:"", title:"", province:"", city:"", barangay:"", street:"", category:"Environment", author:"", desc:"", remarks:"" })}>
+                                            onClick={() => setOrdForm({ number: "", date: "", title: "", province: "", city: "", barangay: "", street: "", category: "Environment", author: "", desc: "", remarks: "" })}>
                                             <i className="ti ti-x" /> Clear
                                         </button>
                                         <button type="button" className="mos-dash-btn-sm dark"
@@ -826,7 +1033,7 @@ function MosDashboard({ onLogout, username }) {
 
                         {/* ── PENDING ── */}
                         <div className={`mos-dash-page-section ${section === "pending" ? "active" : ""}`}>
-                            <div className="mos-dash-page-header" style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+                            <div className="mos-dash-page-header" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                                 <div><h2>Pending Ordinances</h2><p>Ordinances awaiting review and approval</p></div>
                                 <select className="mos-dash-filter">
                                     <option>All Provinces</option><option>Pampanga</option><option>Aurora</option><option>Nueva Ecija</option>
@@ -868,17 +1075,17 @@ function MosDashboard({ onLogout, username }) {
                                 <p>All ordinances that have been approved and enacted</p>
                             </div>
                             <div className="mos-dash-panel">
-                                <div className="mos-dash-panel-body" style={{ padding:0 }}>
+                                <div className="mos-dash-panel-body" style={{ padding: 0 }}>
                                     <table className="mos-dash-table">
                                         <thead><tr><th>No.</th><th>Title</th><th>Province</th><th>Barangay</th><th>Approved On</th><th>Approved By</th></tr></thead>
                                         <tbody>
                                             {[
-                                                { num:"#2025-047", title:"Solid Waste Management Act",     prov:"Pampanga",    brgy:"Sto. Rosario",  date:"Jan 15, 2025", by:"Mayor Santos"     },
-                                                { num:"#2025-046", title:"Anti-Littering Ordinance",       prov:"Bulacan",     brgy:"Cofradia",      date:"Jan 14, 2025", by:"Mayor Reyes"      },
-                                                { num:"#2025-035", title:"Senior Citizen Priority Lane",   prov:"Bataan",      brgy:"Poblacion",     date:"Jan 8, 2025",  by:"Mayor Cruz"       },
-                                                { num:"#2025-028", title:"Animal Control Ordinance",       prov:"Pampanga",    brgy:"Balibago",      date:"Jan 3, 2025",  by:"Mayor Santos"     },
-                                                { num:"#2025-021", title:"Anti-Smoking in Public Areas",   prov:"Tarlac",      brgy:"San Roque",     date:"Dec 28, 2024", by:"Mayor Villanueva" },
-                                                { num:"#2024-198", title:"Curfew Ordinance for Minors",    prov:"Nueva Ecija", brgy:"Sumacab Norte", date:"Dec 20, 2024", by:"Mayor Torres"     },
+                                                { num: "#2025-047", title: "Solid Waste Management Act", prov: "Pampanga", brgy: "Sto. Rosario", date: "Jan 15, 2025", by: "Mayor Santos" },
+                                                { num: "#2025-046", title: "Anti-Littering Ordinance", prov: "Bulacan", brgy: "Cofradia", date: "Jan 14, 2025", by: "Mayor Reyes" },
+                                                { num: "#2025-035", title: "Senior Citizen Priority Lane", prov: "Bataan", brgy: "Poblacion", date: "Jan 8, 2025", by: "Mayor Cruz" },
+                                                { num: "#2025-028", title: "Animal Control Ordinance", prov: "Pampanga", brgy: "Balibago", date: "Jan 3, 2025", by: "Mayor Santos" },
+                                                { num: "#2025-021", title: "Anti-Smoking in Public Areas", prov: "Tarlac", brgy: "San Roque", date: "Dec 28, 2024", by: "Mayor Villanueva" },
+                                                { num: "#2024-198", title: "Curfew Ordinance for Minors", prov: "Nueva Ecija", brgy: "Sumacab Norte", date: "Dec 20, 2024", by: "Mayor Torres" },
                                             ].map(r => (
                                                 <tr key={r.num}>
                                                     <td><strong>{r.num}</strong></td>
@@ -899,10 +1106,10 @@ function MosDashboard({ onLogout, username }) {
                             </div>
                             <div className="mos-dash-metrics-grid">
                                 {[
-                                    { label:"Approval Rate",        value:"89%",         change:"↑ 3% vs last quarter", type:"up"      },
-                                    { label:"Avg. Review Time",     value:"4.2 days",    change:"↓ 0.8 days faster",    type:"up"      },
-                                    { label:"Most Active Province", value:"Pampanga",    change:"247 this year",         type:"neutral" },
-                                    { label:"Top Category",         value:"Environment", change:"38% of all filed",      type:"neutral" },
+                                    { label: "Approval Rate", value: "89%", change: "↑ 3% vs last quarter", type: "up" },
+                                    { label: "Avg. Review Time", value: "4.2 days", change: "↓ 0.8 days faster", type: "up" },
+                                    { label: "Most Active Province", value: "Pampanga", change: "247 this year", type: "neutral" },
+                                    { label: "Top Category", value: "Environment", change: "38% of all filed", type: "neutral" },
                                 ].map(m => (
                                     <div className="mos-dash-metric-card" key={m.label}>
                                         <div className="mos-dash-metric-label">{m.label}</div>
@@ -917,18 +1124,18 @@ function MosDashboard({ onLogout, username }) {
                                     <div className="mos-dash-panel-body">
                                         <div className="mos-dash-report-bars">
                                             {[
-                                                { cat:"Environment",  pct:38, color:"#22c55e" },
-                                                { cat:"Public Order", pct:24, color:"#2C687B" },
-                                                { cat:"Commerce",     pct:18, color:"#f59e0b" },
-                                                { cat:"Welfare",      pct:12, color:"#a855f7" },
-                                                { cat:"Transport",    pct:8,  color:"#DB1A1A" },
+                                                { cat: "Environment", pct: 38, color: "#22c55e" },
+                                                { cat: "Public Order", pct: 24, color: "#2C687B" },
+                                                { cat: "Commerce", pct: 18, color: "#f59e0b" },
+                                                { cat: "Welfare", pct: 12, color: "#a855f7" },
+                                                { cat: "Transport", pct: 8, color: "#DB1A1A" },
                                             ].map(b => (
                                                 <div key={b.cat}>
                                                     <div className="mos-dash-report-bar-row">
                                                         <span>{b.cat}</span><strong>{b.pct}%</strong>
                                                     </div>
-                                                    <div className="mos-dash-progress-bar" style={{ height:7 }}>
-                                                        <div className="mos-dash-progress-fill" style={{ width:`${b.pct}%`, background:b.color }} />
+                                                    <div className="mos-dash-progress-bar" style={{ height: 7 }}>
+                                                        <div className="mos-dash-progress-fill" style={{ width: `${b.pct}%`, background: b.color }} />
                                                     </div>
                                                 </div>
                                             ))}
@@ -937,16 +1144,16 @@ function MosDashboard({ onLogout, username }) {
                                 </div>
                                 <div className="mos-dash-panel">
                                     <div className="mos-dash-panel-header"><h3>Top Provinces by Volume</h3></div>
-                                    <div className="mos-dash-panel-body" style={{ padding:0 }}>
+                                    <div className="mos-dash-panel-body" style={{ padding: 0 }}>
                                         <table className="mos-dash-table">
                                             <thead><tr><th>Province</th><th>Filed</th><th>Approved</th><th>Rate</th></tr></thead>
                                             <tbody>
                                                 {[
-                                                    { prov:"Pampanga",    filed:247, approved:231, rate:"93%", cls:"approved" },
-                                                    { prov:"Bulacan",     filed:198, approved:175, rate:"88%", cls:"approved" },
-                                                    { prov:"Nueva Ecija", filed:167, approved:142, rate:"85%", cls:"pending"  },
-                                                    { prov:"Tarlac",      filed:143, approved:128, rate:"90%", cls:"pending"  },
-                                                    { prov:"Zambales",    filed:98,  approved:79,  rate:"81%", cls:"pending"  },
+                                                    { prov: "Pampanga", filed: 247, approved: 231, rate: "93%", cls: "approved" },
+                                                    { prov: "Bulacan", filed: 198, approved: 175, rate: "88%", cls: "approved" },
+                                                    { prov: "Nueva Ecija", filed: 167, approved: 142, rate: "85%", cls: "pending" },
+                                                    { prov: "Tarlac", filed: 143, approved: 128, rate: "90%", cls: "pending" },
+                                                    { prov: "Zambales", filed: 98, approved: 79, rate: "81%", cls: "pending" },
                                                 ].map(r => (
                                                     <tr key={r.prov}>
                                                         <td>{r.prov}</td><td>{r.filed}</td><td>{r.approved}</td>
@@ -971,19 +1178,19 @@ function MosDashboard({ onLogout, username }) {
                                     <h3>Barangay Compliance Status</h3>
                                     <select className="mos-dash-filter"><option>All Provinces</option><option>Pampanga</option><option>Bulacan</option></select>
                                 </div>
-                                <div className="mos-dash-panel-body" style={{ padding:0 }}>
+                                <div className="mos-dash-panel-body" style={{ padding: 0 }}>
                                     <table className="mos-dash-table">
                                         <thead><tr><th>Barangay</th><th>Municipality</th><th>Province</th><th>Total</th><th>Approved</th><th>Pending</th><th>Compliance</th></tr></thead>
                                         <tbody>
                                             {[
-                                                { brgy:"Sto. Rosario", muni:"San Fernando",  prov:"Pampanga",    tot:14, appr:13, pend:1, comp:"93%",  cls:"approved" },
-                                                { brgy:"Cofradia",     muni:"Malolos City",   prov:"Bulacan",     tot:11, appr:10, pend:1, comp:"91%",  cls:"approved" },
-                                                { brgy:"Aduas Centro", muni:"Cabanatuan",     prov:"Nueva Ecija", tot:9,  appr:7,  pend:2, comp:"78%",  cls:"pending"  },
-                                                { brgy:"Centro",       muni:"Baler",          prov:"Aurora",      tot:6,  appr:4,  pend:2, comp:"67%",  cls:"pending"  },
-                                                { brgy:"Balibago",     muni:"Angeles City",   prov:"Pampanga",    tot:12, appr:12, pend:0, comp:"100%", cls:"approved" },
-                                                { brgy:"East Tapinac", muni:"Olongapo City",  prov:"Zambales",    tot:8,  appr:5,  pend:2, comp:"63%",  cls:"rejected" },
-                                                { brgy:"Poblacion",    muni:"Balanga City",   prov:"Bataan",      tot:10, appr:9,  pend:1, comp:"90%",  cls:"approved" },
-                                                { brgy:"San Miguel",   muni:"Capas",          prov:"Tarlac",      tot:5,  appr:3,  pend:2, comp:"60%",  cls:"pending"  },
+                                                { brgy: "Sto. Rosario", muni: "San Fernando", prov: "Pampanga", tot: 14, appr: 13, pend: 1, comp: "93%", cls: "approved" },
+                                                { brgy: "Cofradia", muni: "Malolos City", prov: "Bulacan", tot: 11, appr: 10, pend: 1, comp: "91%", cls: "approved" },
+                                                { brgy: "Aduas Centro", muni: "Cabanatuan", prov: "Nueva Ecija", tot: 9, appr: 7, pend: 2, comp: "78%", cls: "pending" },
+                                                { brgy: "Centro", muni: "Baler", prov: "Aurora", tot: 6, appr: 4, pend: 2, comp: "67%", cls: "pending" },
+                                                { brgy: "Balibago", muni: "Angeles City", prov: "Pampanga", tot: 12, appr: 12, pend: 0, comp: "100%", cls: "approved" },
+                                                { brgy: "East Tapinac", muni: "Olongapo City", prov: "Zambales", tot: 8, appr: 5, pend: 2, comp: "63%", cls: "rejected" },
+                                                { brgy: "Poblacion", muni: "Balanga City", prov: "Bataan", tot: 10, appr: 9, pend: 1, comp: "90%", cls: "approved" },
+                                                { brgy: "San Miguel", muni: "Capas", prov: "Tarlac", tot: 5, appr: 3, pend: 2, comp: "60%", cls: "pending" },
                                             ].map(r => (
                                                 <tr key={r.brgy}>
                                                     <td>{r.brgy}</td><td>{r.muni}</td><td>{r.prov}</td>
@@ -1002,7 +1209,7 @@ function MosDashboard({ onLogout, username }) {
                             <div className="mos-dash-page-header">
                                 <h2>Settings</h2><p>System configuration and preferences</p>
                             </div>
-                            <div className="mos-dash-panel" style={{ maxWidth:540 }}>
+                            <div className="mos-dash-panel" style={{ maxWidth: 540 }}>
                                 <div className="mos-dash-panel-body">
                                     <div className="mos-dash-form-field">
                                         <label>LGU Name</label>
@@ -1037,23 +1244,23 @@ function MosDashboard({ onLogout, username }) {
 
                         {/* ── USERS & ROLES ── */}
                         <div className={`mos-dash-page-section ${section === "users" ? "active" : ""}`}>
-                            <div className="mos-dash-page-header" style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+                            <div className="mos-dash-page-header" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                                 <div><h2>Users &amp; Roles</h2><p>Manage system users and access levels</p></div>
                                 <button type="button" className="mos-dash-btn-sm" onClick={() => showToast("Add user dialog coming soon")}>
                                     <i className="ti ti-user-plus" /> Add User
                                 </button>
                             </div>
                             <div className="mos-dash-panel">
-                                <div className="mos-dash-panel-body" style={{ padding:0 }}>
+                                <div className="mos-dash-panel-body" style={{ padding: 0 }}>
                                     <table className="mos-dash-table">
                                         <thead><tr><th>Name</th><th>Email</th><th>Province</th><th>Role</th><th>Status</th></tr></thead>
                                         <tbody>
                                             {[
-                                                { name:"Admin User",      email:"admin@lgu.gov.ph",       prov:"All",      role:"Super Admin", roleCls:"active",   status:"Active",   stCls:"approved" },
-                                                { name:"Maria Santos",    email:"m.santos@lgu.gov.ph",    prov:"Pampanga", role:"LGU Officer", roleCls:"pending",  status:"Active",   stCls:"approved" },
-                                                { name:"Jose Reyes",      email:"j.reyes@lgu.gov.ph",     prov:"Bulacan",  role:"LGU Officer", roleCls:"pending",  status:"Active",   stCls:"approved" },
-                                                { name:"Ana Cruz",        email:"a.cruz@lgu.gov.ph",      prov:"Aurora",   role:"Viewer",      roleCls:"draft",    status:"Inactive", stCls:"draft"    },
-                                                { name:"Pedro Dela Cruz", email:"p.delacruz@lgu.gov.ph",  prov:"Zambales", role:"LGU Officer", roleCls:"pending",  status:"Active",   stCls:"approved" },
+                                                { name: "Admin User", email: "admin@lgu.gov.ph", prov: "All", role: "Super Admin", roleCls: "active", status: "Active", stCls: "approved" },
+                                                { name: "Maria Santos", email: "m.santos@lgu.gov.ph", prov: "Pampanga", role: "LGU Officer", roleCls: "pending", status: "Active", stCls: "approved" },
+                                                { name: "Jose Reyes", email: "j.reyes@lgu.gov.ph", prov: "Bulacan", role: "LGU Officer", roleCls: "pending", status: "Active", stCls: "approved" },
+                                                { name: "Ana Cruz", email: "a.cruz@lgu.gov.ph", prov: "Aurora", role: "Viewer", roleCls: "draft", status: "Inactive", stCls: "draft" },
+                                                { name: "Pedro Dela Cruz", email: "p.delacruz@lgu.gov.ph", prov: "Zambales", role: "LGU Officer", roleCls: "pending", status: "Active", stCls: "approved" },
                                             ].map(r => (
                                                 <tr key={r.email}>
                                                     <td><strong>{r.name}</strong></td>
@@ -1084,26 +1291,26 @@ function MosDashboard({ onLogout, username }) {
 
 // ─── Public Site Data ────────────────────────────────────────────────────────
 const provinceCards = [
-    { name:"Aurora",      image:auroraImage      },
-    { name:"Bataan",      image:bataanImage      },
-    { name:"Bulacan",     image:bulacanImage     },
-    { name:"Nueva Ecija", image:nuevaEcijaImage  },
-    { name:"Pampanga",    image:pampangaImage    },
-    { name:"Tarlac",      image:tarlacImage      },
-    { name:"Zambales",    image:zambalesImage    },
+    { name: "Aurora", image: auroraImage },
+    { name: "Bataan", image: bataanImage },
+    { name: "Bulacan", image: bulacanImage },
+    { name: "Nueva Ecija", image: nuevaEcijaImage },
+    { name: "Pampanga", image: pampangaImage },
+    { name: "Tarlac", image: tarlacImage },
+    { name: "Zambales", image: zambalesImage },
 ];
 
 const quickLinks = [
-    { title:"News & Information", desc:"Publish news, regulations, and static pages with categories and tags." },
-    { title:"Public Engagement",  desc:"Events, announcements, consultation, and polling for citizens."        },
-    { title:"Media & Downloads",  desc:"Galleries, playlists, sliders, and secure document downloads."         },
+    { title: "News & Information", desc: "Publish news, regulations, and static pages with categories and tags." },
+    { title: "Public Engagement", desc: "Events, announcements, consultation, and polling for citizens." },
+    { title: "Media & Downloads", desc: "Galleries, playlists, sliders, and secure document downloads." },
 ];
 
 const municipalStats = [
-    { label:"Active Ordinances",    value:"245"   },
-    { label:"Municipal Notices",    value:"18"    },
-    { label:"Registered Citizens",  value:"1,250" },
-    { label:"Downloaded Documents", value:"4,500" },
+    { label: "Active Ordinances", value: "245" },
+    { label: "Municipal Notices", value: "18" },
+    { label: "Registered Citizens", value: "1,250" },
+    { label: "Downloaded Documents", value: "4,500" },
 ];
 
 // ─── Main Demo Component ─────────────────────────────────────────────────────
@@ -1111,44 +1318,44 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
     const MODAL_CLOSE_DELAY = 150;
     const LOGIN_CLOSE_DELAY = 140;
 
-    const [showLoginModal,  setShowLoginModal ] = useState(false);
-    const [isClosing,       setIsClosing      ] = useState(false);
-    const [isLoginClosing,  setIsLoginClosing ] = useState(false);
-    const [loginForm,       setLoginForm      ] = useState({ username:"", password:"" });
-    const [activeProvince,  setActiveProvince ] = useState("Pampanga");
-    const [loggedIn,        setLoggedIn       ] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
+    const [isLoginClosing, setIsLoginClosing] = useState(false);
+    const [loginForm, setLoginForm] = useState({ username: "", password: "" });
+    const [activeProvince, setActiveProvince] = useState("Pampanga");
+    const [loggedIn, setLoggedIn] = useState(false);
 
     const demoAccounts = [
-        { role:"Admin",  username:"admin",  password:"admin123",  icon:"👤" },
-        { role:"Staff",  username:"staff",  password:"staff123",  icon:"👨‍💼" },
-        { role:"Viewer", username:"viewer", password:"viewer123", icon:"👁️" },
+        { role: "Admin", username: "admin", password: "admin123", icon: "👤" },
+        { role: "Staff", username: "staff", password: "staff123", icon: "👨‍💼" },
+        { role: "Viewer", username: "viewer", password: "viewer123", icon: "👁️" },
     ];
 
     const fillDemoAccount = (account) => {
-        setLoginForm({ username:account.username, password:account.password });
+        setLoginForm({ username: account.username, password: account.password });
     };
 
-    const [notification, setNotification] = useState({ visible:false, message:"", type:"info" });
-    const notificationTimeoutRef  = useRef(null);
-    const closeTimeoutRef         = useRef(null);
-    const loginCloseTimeoutRef    = useRef(null);
-    const provinceCarouselRef     = useRef(null);
-    const isCarouselDraggingRef   = useRef(false);
-    const carouselScrollEndTimeoutRef         = useRef(null);
-    const carouselSettleTimeoutRef            = useRef(null);
-    const carouselProgrammaticUnlockTimeoutRef= useRef(null);
-    const isProgrammaticCarouselScrollRef     = useRef(false);
-    const dragStartXRef           = useRef(0);
-    const dragStartScrollLeftRef  = useRef(0);
+    const [notification, setNotification] = useState({ visible: false, message: "", type: "info" });
+    const notificationTimeoutRef = useRef(null);
+    const closeTimeoutRef = useRef(null);
+    const loginCloseTimeoutRef = useRef(null);
+    const provinceCarouselRef = useRef(null);
+    const isCarouselDraggingRef = useRef(false);
+    const carouselScrollEndTimeoutRef = useRef(null);
+    const carouselSettleTimeoutRef = useRef(null);
+    const carouselProgrammaticUnlockTimeoutRef = useRef(null);
+    const isProgrammaticCarouselScrollRef = useRef(false);
+    const dragStartXRef = useRef(0);
+    const dragStartScrollLeftRef = useRef(0);
     const previousHtmlOverflowRef = useRef("");
     const previousBodyOverflowRef = useRef("");
-    const activeProvinceRef       = useRef("Pampanga");
+    const activeProvinceRef = useRef("Pampanga");
 
     const showNotification = (message, type = "success", duration = 3600) => {
         if (notificationTimeoutRef.current) clearTimeout(notificationTimeoutRef.current);
-        setNotification({ visible:true, message, type });
+        setNotification({ visible: true, message, type });
         notificationTimeoutRef.current = setTimeout(() => {
-            setNotification(prev => ({ ...prev, visible:false }));
+            setNotification(prev => ({ ...prev, visible: false }));
             notificationTimeoutRef.current = null;
         }, duration);
     };
@@ -1182,8 +1389,8 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
             document.documentElement.style.overflow = previousHtmlOverflowRef.current;
             document.body.style.overflow = previousBodyOverflowRef.current;
             [closeTimeoutRef, loginCloseTimeoutRef, carouselSettleTimeoutRef,
-             carouselScrollEndTimeoutRef, carouselProgrammaticUnlockTimeoutRef,
-             notificationTimeoutRef].forEach(r => { if (r.current) clearTimeout(r.current); });
+                carouselScrollEndTimeoutRef, carouselProgrammaticUnlockTimeoutRef,
+                notificationTimeoutRef].forEach(r => { if (r.current) clearTimeout(r.current); });
         };
     }, []);
 
@@ -1229,14 +1436,14 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
     const scrollProvinceCardAtIndex = (index, behavior = "smooth") => {
         const cards = getProvinceCards();
         if (!cards.length) return;
-        cards[(index + cards.length) % cards.length].scrollIntoView({ behavior, inline:"center", block:"nearest" });
+        cards[(index + cards.length) % cards.length].scrollIntoView({ behavior, inline: "center", block: "nearest" });
     };
 
     const scrollProvinces = (direction, behavior = "smooth") => {
         const totalCards = provinceCards.length;
         if (!totalCards) return;
         const activeIndex = provinceCards.findIndex(p => p.name === activeProvinceRef.current);
-        const baseIndex   = activeIndex >= 0 ? activeIndex : getCenteredCardIndex();
+        const baseIndex = activeIndex >= 0 ? activeIndex : getCenteredCardIndex();
         if (baseIndex < 0) return;
         const targetIndex = (baseIndex + direction + totalCards) % totalCards;
         activeProvinceRef.current = provinceCards[targetIndex].name;
@@ -1254,7 +1461,7 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
         const container = provinceCarouselRef.current;
         if (!container) return;
         container.querySelector(`[data-province="${provinceName}"]`)
-            ?.scrollIntoView({ behavior, inline:"center", block:"nearest" });
+            ?.scrollIntoView({ behavior, inline: "center", block: "nearest" });
     };
 
     const updateCenteredProvince = () => {
@@ -1276,8 +1483,8 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
         if (event.pointerType === "mouse" && event.button !== 0) return;
         isProgrammaticCarouselScrollRef.current = false;
         if (carouselProgrammaticUnlockTimeoutRef.current) clearTimeout(carouselProgrammaticUnlockTimeoutRef.current);
-        isCarouselDraggingRef.current  = true;
-        dragStartXRef.current          = event.clientX;
+        isCarouselDraggingRef.current = true;
+        dragStartXRef.current = event.clientX;
         dragStartScrollLeftRef.current = container.scrollLeft;
         container.classList.add("is-dragging");
         if (container.setPointerCapture) container.setPointerCapture(event.pointerId);
@@ -1310,7 +1517,7 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
                 if (!isProgrammaticCarouselScrollRef.current) updateCenteredProvince();
             }, 80);
         };
-        container.addEventListener("scroll", handleScroll, { passive:true });
+        container.addEventListener("scroll", handleScroll, { passive: true });
         window.addEventListener("resize", updateCenteredProvince);
         updateCenteredProvince();
         scrollProvinceIntoView(activeProvince, "auto");
@@ -1357,7 +1564,7 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
                 <div
                     className="mos-system"
                     style={loggedIn
-                        ? { display:"flex", flexDirection:"column", flex:"1", minHeight:0, overflow:"hidden" }
+                        ? { display: "flex", flexDirection: "column", flex: "1", minHeight: 0, overflow: "hidden" }
                         : {}
                     }
                 >
@@ -1372,7 +1579,7 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
                                             {notification.type === "success" ? "✅" : "ℹ️"}
                                         </div>
                                         <div className="mos-notification-message">{notification.message}</div>
-                                        <button className="mos-notification-close" onClick={() => setNotification(s => ({ ...s, visible:false }))} aria-label="Dismiss">×</button>
+                                        <button className="mos-notification-close" onClick={() => setNotification(s => ({ ...s, visible: false }))} aria-label="Dismiss">×</button>
                                     </div>
                                 </div>
                             )}
@@ -1454,11 +1661,11 @@ export default function MunicipalOrdinanceDemo({ onClose }) {
                                         <form onSubmit={handleLoginSubmit}>
                                             <div className="mos-form-field">
                                                 <input type="text" placeholder="Username" value={loginForm.username}
-                                                    onChange={e => setLoginForm(prev => ({ ...prev, username:e.target.value }))} required />
+                                                    onChange={e => setLoginForm(prev => ({ ...prev, username: e.target.value }))} required />
                                             </div>
                                             <div className="mos-form-field">
                                                 <input type="password" placeholder="Password" value={loginForm.password}
-                                                    onChange={e => setLoginForm(prev => ({ ...prev, password:e.target.value }))} required />
+                                                    onChange={e => setLoginForm(prev => ({ ...prev, password: e.target.value }))} required />
                                             </div>
                                             <button type="submit" className="mos-login-submit">Login</button>
                                         </form>

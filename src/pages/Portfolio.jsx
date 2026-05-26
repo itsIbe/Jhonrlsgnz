@@ -6,8 +6,10 @@ import MunicipalOrdinanceDemo from "./demos/MunicipalOrdinanceDemo";
 import TruckTrailerDriverDemo from "./demos/TruckTrailerDriverDemo";
 import SalesManagementSystem from "./demos/SalesManagementSystem";
 import SpmsDemo from "./demos/SpmsDemo";
+import FlipSevenScoreBoard from "./demos/FlipSevenScoreBoard";
 import municipalOrdinance from "../assets/municipalOrdinance.png";
 import SalesManagementSystemImage from "../assets/salesManagementSystem.png";
+import spms from "../assets/spms.png";
 
 // Use Vite env vars so keys are easier to manage across environments.
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -164,7 +166,7 @@ const projects = [
     title: "Strategic Performance Management System",
     desc: "A system for managing and tracking strategic performance indicators.",
     extraDesc: "A Strategic Performance Management System helps organizations track KPIs, align goals, and monitor progress across departments. It provides dashboards for target setting, scorecards, analytics, and reporting to support better strategy execution and business performance.",
-    image: null,
+    image: spms,
     color: "#1e3040",
     techStack: ["React", "Charting", "KPI Tracking", "Dashboard UX"],
     demo: "#",
@@ -179,6 +181,16 @@ const projects = [
     techStack: ["React", "JavaScript", "CSS", "Responsive UI"],
     demo: null,
     demoType: "municipal-ordinance",
+  },
+  {
+    title: "Flip Seven ScoreBoard",
+    desc: "A card-based scoreboard for tracking scores in a game or competition.",
+    extraDesc: "A card-based scoreboard system designed for tracking scores in games or competitions. It features a visually engaging interface where players can flip cards to reveal their scores, making it ideal for interactive gaming events, trivia nights, or any competitive setting. The system allows for easy score updates, player management, and can be customized with different themes and styles to enhance the user experience.",
+    image: null,
+    color: "#1e3040",
+    techStack: ["React", "JavaScript", "CSS", "Responsive UI"],
+    demo: "null",
+    demoType: "FlipSevenScoreBoard",
   },
 ];
 function ProjectCard({ project, onOpenPreview }) {
@@ -204,7 +216,7 @@ function ProjectCard({ project, onOpenPreview }) {
         <h3>{project.title}</h3>
         <p>{project.desc}</p>
         <div className="project-links">
-          {(["municipal-ordinance", "truck-trailer-driver", "sales-management", "spms"].includes(project.demoType)) ? (
+          {(["municipal-ordinance", "truck-trailer-driver", "sales-management", "spms", "FlipSevenScoreBoard"].includes(project.demoType)) ? (
             <button type="button" className="link-demo link-demo-button" onClick={() => onOpenPreview(project)}>
               View <span>↗</span>
             </button>
@@ -301,6 +313,7 @@ export default function Portfolio() {
       "truck-trailer-driver": TruckTrailerDriverDemo,
       "sales-management": SalesManagementSystem,
       "spms": SpmsDemo,
+      "FlipSevenScoreBoard": FlipSevenScoreBoard,
     }[activeDemo.demoType]
     : null;
 

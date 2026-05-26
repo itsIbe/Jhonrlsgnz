@@ -50,7 +50,7 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const navLinks = ["Home", "About", "Skills", "Projects", "Contact"];
+  const navLinks = ["Home", "About", "Skills", "Projects"];
 
   const scrollTo = (id) => {
     const el = document.getElementById(id.toLowerCase());
