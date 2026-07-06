@@ -775,4 +775,844 @@ void main(){
                             /* Hide wide search inputs inside the dashboard on small screens */
                             .mos-system input[placeholder^="Search"] { display: none !important; }
                         }
-                    `}),n===`landing`&&(0,x.jsxs)(`div`,{style:{fontFamily:`'Open Sans', sans-serif`,color:`#444`},children:[(0,x.jsx)(`link`,{href:`https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap`,rel:`stylesheet`}),(0,x.jsx)(rr,{onLoginClick:()=>r(`login`)}),(0,x.jsx)(ir,{}),(0,x.jsx)(ar,{}),(0,x.jsx)(cr,{}),(0,x.jsx)(ur,{}),(0,x.jsx)(dr,{})]}),n===`login`&&(0,x.jsx)(`div`,{style:{height:`100%`,overflow:`hidden`},children:(0,x.jsx)(nr,{onBack:()=>r(`landing`),onLogin:()=>r(`dashboard`)})}),n===`dashboard`&&(0,x.jsx)(`div`,{style:{height:`100%`,overflow:`hidden`},children:(0,x.jsx)(Sr,{onLogout:()=>r(`landing`)})})]})]})]})}function wr({onClose:e,project:t}){return(0,_.useEffect)(()=>{let t=document.body.style.overflow,n=t=>{t.key===`Escape`&&e?.()};return document.body.style.overflow=`hidden`,window.addEventListener(`keydown`,n),()=>{document.body.style.overflow=t,window.removeEventListener(`keydown`,n)}},[e]),(0,x.jsxs)(`div`,{className:`demo-modal`,role:`dialog`,"aria-modal":`true`,"aria-label":`Flip Seven ScoreBoard demo`,children:[(0,x.jsx)(`button`,{type:`button`,className:`demo-modal-backdrop`,"aria-label":`Close demo`,onClick:e}),(0,x.jsxs)(`div`,{className:`demo-shell`,children:[(0,x.jsxs)(`header`,{className:`demo-topbar`,children:[(0,x.jsxs)(`div`,{className:`demo-topbar-left`,children:[(0,x.jsx)(`button`,{type:`button`,className:`demo-back`,onClick:e,"aria-label":`Back`,children:`< Back`}),(0,x.jsxs)(`div`,{children:[(0,x.jsx)(`p`,{className:`demo-kicker`,children:`Personal project for Flip Seven`}),(0,x.jsx)(`h2`,{children:`Flip Seven ScoreBoard`})]})]}),(0,x.jsxs)(`div`,{className:`demo-topbar-right`,children:[(0,x.jsx)(`span`,{className:`demo-close-hint`,children:`Press Esc or close`}),(0,x.jsx)(`button`,{type:`button`,className:`demo-close`,onClick:e,children:`Close`})]})]}),(0,x.jsx)(`div`,{className:`mos-system`,children:(0,x.jsxs)(`div`,{className:`blank-demo-content`,children:[(0,x.jsx)(`h3`,{children:`Blank demo placeholder`}),(0,x.jsx)(`p`,{children:`This white panel is reserved for the Flip Seven ScoreBoard demo.`})]})})]})]})}var Tr=`/Jhonrlsgnz/assets/municipalOrdinance-DN4MtpdX.png`,Er=`/Jhonrlsgnz/assets/salesManagementSystem-BeTOgZ7n.png`,Dr=`/Jhonrlsgnz/assets/spms-Bcd5x_G3.png`,Or=`service_lph0pdv`,kr=`template_bnx61ik`,Ar=`3XjyGUgkZ4Lvg9VjQ`,jr=[{name:`React`,level:5,color:`#61DAFB`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#61DAFB`,children:[(0,x.jsx)(`circle`,{cx:`12`,cy:`12`,r:`2.5`}),(0,x.jsx)(`ellipse`,{cx:`12`,cy:`12`,rx:`10`,ry:`4`,fill:`none`,stroke:`#61DAFB`,strokeWidth:`1.2`}),(0,x.jsx)(`ellipse`,{cx:`12`,cy:`12`,rx:`10`,ry:`4`,fill:`none`,stroke:`#61DAFB`,strokeWidth:`1.2`,transform:`rotate(60 12 12)`}),(0,x.jsx)(`ellipse`,{cx:`12`,cy:`12`,rx:`10`,ry:`4`,fill:`none`,stroke:`#61DAFB`,strokeWidth:`1.2`,transform:`rotate(120 12 12)`})]})},{name:`JavaScript`,level:5,color:`#F7DF1E`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#F7DF1E`,children:[(0,x.jsx)(`rect`,{width:`24`,height:`24`,rx:`2`,fill:`#F7DF1E`}),(0,x.jsx)(`path`,{d:`M7 18.5c.5.8 1.2 1.4 2.4 1.4 1.4 0 2.2-.7 2.2-1.9V12H9.8v5.9c0 .5-.2.8-.7.8-.5 0-.8-.3-1.1-.7L7 18.5zm6.6-.2c.6 1 1.5 1.6 2.9 1.6 1.5 0 2.6-.8 2.6-2.1 0-1.2-.7-1.8-2-2.3l-.6-.2c-.7-.3-.9-.5-.9-.9 0-.4.3-.6.7-.6.5 0 .8.2 1 .7l1.4-.9c-.6-1-1.4-1.4-2.4-1.4-1.4 0-2.4.9-2.4 2.2 0 1.1.7 1.8 1.9 2.2l.6.2c.7.3 1 .5 1 1s-.4.8-.9.8c-.7 0-1.1-.4-1.4-.9l-1.5.6z`,fill:`#333`})]})},{name:`HTML5`,level:5,color:`#E34F26`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#E34F26`,children:[(0,x.jsx)(`path`,{d:`M4.136 18.948L2.5 2.5h19l-1.638 16.444L12 21.5l-7.864-2.552z`}),(0,x.jsx)(`path`,{d:`M12 19.98l6.35-1.76 1.4-15.72H12v17.48z`,fill:`#EF652A`}),(0,x.jsx)(`path`,{d:`M12 10.5H8.9l-.21-2.38H12V5.88H6.27l.56 6.25H12V10.5zm0 5.82l-.01.003-3.16-.853-.202-2.266H6.34l.396 4.44 5.26 1.46.004-.001V16.32z`,fill:`#fff`}),(0,x.jsx)(`path`,{d:`M12 10.5v2.13h2.89l-.272 3.04-2.618.706v2.223l5.27-1.46.039-.43.6-6.72.063-.7H12zm0-4.62v2.22h5.56l.046-.52.105-1.17.055-.53H12z`,fill:`#EBEBEB`})]})},{name:`CSS3`,level:5,color:`#1572B6`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#1572B6`,children:[(0,x.jsx)(`path`,{d:`M4.136 18.948L2.5 2.5h19l-1.638 16.444L12 21.5l-7.864-2.552z`}),(0,x.jsx)(`path`,{d:`M12 19.98l6.35-1.76 1.4-15.72H12v17.48z`,fill:`#33A9DC`}),(0,x.jsx)(`path`,{d:`M12 8.1H8.7l.22 2.4H12V8.1zm0-2.22H6.27l.22 2.22H12V5.88zm0 8.5l-2.63-.71-.17-1.96H6.86l.35 3.89 4.79 1.33V14.38zm0-2.5h-2.6l-.09-1.28H12v-2.1H7.7l.58 6.63L12 16.24v-4.36z`,fill:`#fff`}),(0,x.jsx)(`path`,{d:`M12 8.1v2.4h3.08l-.29 3.12-2.79.76v2.27l4.79-1.33.04-.4.6-6.82H12zm0-2.22v2.22h6.08l.05-.52.11-1.17.06-.53H12z`,fill:`#EBEBEB`})]})},{name:`PowerApps`,level:4,color:`#742774`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,children:[(0,x.jsx)(`rect`,{width:`24`,height:`24`,rx:`4`,fill:`#742774`}),(0,x.jsx)(`path`,{d:`M12 3L4 8v8l8 5 8-5V8L12 3z`,fill:`url(#paGrad)`}),(0,x.jsx)(`defs`,{children:(0,x.jsxs)(`linearGradient`,{id:`paGrad`,x1:`4`,y1:`3`,x2:`20`,y2:`21`,gradientUnits:`userSpaceOnUse`,children:[(0,x.jsx)(`stop`,{stopColor:`#C663C8`}),(0,x.jsx)(`stop`,{offset:`1`,stopColor:`#6B1F6B`})]})}),(0,x.jsx)(`path`,{d:`M12 7l-5 3v4l5 3 5-3v-4L12 7z`,fill:`rgba(255,255,255,0.15)`}),(0,x.jsx)(`path`,{d:`M9 12l2 2 4-4`,stroke:`white`,strokeWidth:`1.5`,strokeLinecap:`round`,strokeLinejoin:`round`})]})},{name:`SQL`,level:4,color:`#4479A1`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#4479A1`,children:[(0,x.jsx)(`ellipse`,{cx:`12`,cy:`6`,rx:`8`,ry:`3`,fill:`#4479A1`}),(0,x.jsx)(`path`,{d:`M4 6v4c0 1.66 3.58 3 8 3s8-1.34 8-3V6`,fill:`#5B8DB8`}),(0,x.jsx)(`path`,{d:`M4 10v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4`,fill:`#4479A1`}),(0,x.jsx)(`path`,{d:`M4 14v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4`,fill:`#5B8DB8`})]})},{name:`Photoshop`,level:4,color:`#31A8FF`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,children:[(0,x.jsx)(`rect`,{width:`24`,height:`24`,rx:`3`,fill:`#001E36`}),(0,x.jsx)(`text`,{x:`3`,y:`17`,fontSize:`10`,fontWeight:`bold`,fill:`#31A8FF`,fontFamily:`Arial, sans-serif`,children:`Ps`})]})},{name:`Illustrator`,level:4,color:`#FF9A00`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,children:[(0,x.jsx)(`rect`,{width:`24`,height:`24`,rx:`3`,fill:`#330000`}),(0,x.jsx)(`text`,{x:`3`,y:`17`,fontSize:`10`,fontWeight:`bold`,fill:`#FF9A00`,fontFamily:`Arial, sans-serif`,children:`Ai`})]})},{name:`Figma`,level:4,color:`#F24E1E`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,children:[(0,x.jsx)(`rect`,{x:`8`,y:`2`,width:`8`,height:`6`,rx:`3`,fill:`#F24E1E`}),(0,x.jsx)(`rect`,{x:`8`,y:`9`,width:`8`,height:`6`,rx:`3`,fill:`#FF7262`}),(0,x.jsx)(`rect`,{x:`8`,y:`16`,width:`8`,height:`6`,rx:`3`,fill:`#0ACF83`}),(0,x.jsx)(`rect`,{x:`2`,y:`2`,width:`6`,height:`6`,rx:`3`,fill:`#A259FF`}),(0,x.jsx)(`circle`,{cx:`5`,cy:`12`,r:`3`,fill:`#1ABCFE`})]})}].map(e=>({node:e.icon,title:e.name,href:`#`})),Mr=[{title:`Truck, Trailer, and Driver Management System`,desc:`A system for managing trucks, trailers, and drivers with counting capacity dashboards.`,extraDesc:`A truck, trailer, and driver management system enables fleet managers to track vehicle availability, assign drivers, monitor maintenance schedules, and optimize routing. It includes inventory tracking, capacity planning, driver assignments, and dashboard analytics to streamline operations and ensure efficient transportation management.`,image:null,color:`#1e3a5f`,techStack:[`React`,`JavaScript`,`CSS`,`Fleet Tracking`,`Capacity Dashboards`],demo:`#`,demoType:`truck-trailer-driver`},{title:`Sales Management System`,desc:`A system for managing sales, tracking performance, and generating reports for ASM, Forecast, DCT, SFT, and EXD.`,extraDesc:`A Sales Management System centralizes sales tracking, performance monitoring, and reporting for regional teams. It supports lead tracking, revenue forecasting, sales order management, and dashboard insights to improve decision making and boost sales productivity.`,image:Er,color:`#1a2e4a`,techStack:[`Google Sheets`,`Google Apps Script`,`Google Gspread API`,`Sheets API`,`Pivot Tables`],demo:`#`,demoType:`sales-management`},{title:`Strategic Performance Management System`,desc:`A system for managing and tracking strategic performance indicators.`,extraDesc:`A Strategic Performance Management System helps organizations track KPIs, align goals, and monitor progress across departments. It provides dashboards for target setting, scorecards, analytics, and reporting to support better strategy execution and business performance.`,image:Dr,color:`#1e3040`,techStack:[`React`,`Charting`,`KPI Tracking`,`Dashboard UX`],demo:`#`,demoType:`spms`},{title:`Municipal Ordinance`,desc:`A system for managing and tracking municipal ordinances and regulations.`,extraDesc:`A Municipal Ordinance System is a web-based application designed to help Local Government Units (LGUs) manage, monitor, and organize municipal ordinances and regulations digitally. The system allows users to create, review, approve, track, and archive ordinances efficiently. It includes features such as dashboard analytics, ordinance management, barangay tracking, approval workflows, reporting, notifications, and user role management. The goal of the system is to improve efficiency, reduce paperwork, enhance transparency, and simplify the monitoring of local laws and regulations within municipalities and barangays.`,image:Tr,color:`#1e3040`,techStack:[`React`,`JavaScript`,`CSS`,`Responsive UI`],demo:null,demoType:`municipal-ordinance`},{title:`Flip Seven ScoreBoard`,desc:`A card-based scoreboard for tracking scores in a game or competition.`,extraDesc:`A card-based scoreboard system designed for tracking scores in games or competitions. It features a visually engaging interface where players can flip cards to reveal their scores, making it ideal for interactive gaming events, trivia nights, or any competitive setting. The system allows for easy score updates, player management, and can be customized with different themes and styles to enhance the user experience.`,image:null,color:`#1e3040`,techStack:[`React`,`JavaScript`,`CSS`,`Responsive UI`],demo:`null`,demoType:`FlipSevenScoreBoard`}];function Nr({project:e,onOpenPreview:t}){return(0,x.jsxs)(`div`,{className:`project-card`,children:[(0,x.jsx)(`div`,{className:`project-img`,style:{background:e.color},children:e.image?(0,x.jsx)(`img`,{src:e.image,alt:e.title,className:`project-img-inner`}):(0,x.jsxs)(`div`,{className:`project-mockup`,children:[(0,x.jsx)(`div`,{className:`mockup-bar`}),(0,x.jsx)(`div`,{className:`mockup-row`}),(0,x.jsx)(`div`,{className:`mockup-row short`}),(0,x.jsx)(`div`,{className:`mockup-grid`,children:[...[,,,,]].map((e,t)=>(0,x.jsx)(`div`,{className:`mockup-cell`},t))})]})}),(0,x.jsxs)(`div`,{className:`project-info`,children:[(0,x.jsx)(`h3`,{children:e.title}),(0,x.jsx)(`p`,{children:e.desc}),(0,x.jsx)(`div`,{className:`project-links`,children:[`municipal-ordinance`,`truck-trailer-driver`,`sales-management`,`spms`,`FlipSevenScoreBoard`].includes(e.demoType)?(0,x.jsxs)(`button`,{type:`button`,className:`link-demo link-demo-button`,onClick:()=>t(e),children:[`View `,(0,x.jsx)(`span`,{children:`↗`})]}):e.demo?(0,x.jsxs)(`a`,{href:e.demo,className:`link-demo`,target:`_blank`,rel:`noreferrer`,children:[`Live Demo `,(0,x.jsx)(`span`,{children:`↗`})]}):(0,x.jsx)(`span`,{className:`link-demo link-demo-disabled`,children:`Demo coming soon`})})]})]})}function Pr(){let[e,t]=(0,_.useState)({name:``,email:``,subject:``,message:``}),[n,r]=(0,_.useState)(!1),[i,a]=(0,_.useState)(null),[o,s]=(0,_.useState)(null),c=(0,_.useRef)(``),l=(0,_.useRef)(``);(0,_.useEffect)(()=>{},[]),(0,_.useEffect)(()=>{if(o)return c.current=document.body.style.overflow,l.current=document.documentElement.style.overflow,document.body.style.overflow=`hidden`,document.documentElement.style.overflow=`hidden`,()=>{document.body.style.overflow=c.current,document.documentElement.style.overflow=l.current}},[o]);let u=n=>{t({...e,[n.target.name]:n.target.value})},d=async n=>{n.preventDefault(),r(!0);try{await hn.send(Or,kr,{from_name:e.name,to_email:`seguenzajhonruel02@gmail.com`,reply_to:e.email,from_email:e.email,subject:e.subject,message:e.message},{publicKey:Ar}),alert(`✅ Message sent successfully! I'll get back to you soon.`),t({name:``,email:``,subject:``,message:``})}catch(e){let t=e?.status?` (status: ${e.status})`:``,n=e?.text||e?.message||`Unknown error`;alert(`❌ Failed to send message${t}: ${n}`),console.error(`EmailJS error:`,e)}finally{r(!1)}},f=e=>{s(e)},p=()=>{o&&(a(o),s(null))},m=()=>{s(null)},h=i?{"municipal-ordinance":Fn,"truck-trailer-driver":In,"sales-management":Ln,spms:Cr,FlipSevenScoreBoard:wr}[i.demoType]:null;return(0,x.jsxs)(`main`,{children:[(0,x.jsx)(`section`,{id:`about`,className:`about-section`,children:(0,x.jsxs)(`div`,{className:`about-container`,children:[(0,x.jsx)(`div`,{className:`about-img-wrap`,children:(0,x.jsx)(`img`,{src:_n,alt:`About Jhon`,className:`about-img`})}),(0,x.jsxs)(`div`,{className:`about-text`,children:[(0,x.jsx)(`p`,{className:`section-tag`,children:`ABOUT ME`}),(0,x.jsx)(`h2`,{className:`about-heading`,children:`Building clean, scalable, and modern web apps..`}),(0,x.jsxs)(`p`,{className:`about-desc`,children:[`Hi, I’m Jhon — a Frontend Developer and Graphic Designer based in the Philippines, passionate about creating modern, responsive, and user-focused digital experiences. I specialize in building web applications, dashboards, and enterprise-style systems using technologies such as React, TypeScript, JavaScript, CSS, and modern UI/UX practices.`,(0,x.jsx)(`br`,{}),(0,x.jsx)(`br`,{}),`Over the years, I’ve worked on developing responsive admin dashboards, sales monitoring systems, user management modules, custom modals, advanced table settings, and interactive interfaces that focus on both performance and usability. I enjoy transforming complex workflows into clean, intuitive, and visually appealing designs while maintaining scalable and maintainable frontend architecture.`,(0,x.jsx)(`br`,{}),(0,x.jsx)(`br`,{}),`Aside from development, I also have experience in graphic design, branding, packaging design, and UI/UX design, working with clients from industries such as fashion, food, and technology. My design approach combines creativity, functionality, and attention to detail to create seamless user experiences.`,(0,x.jsx)(`br`,{}),(0,x.jsx)(`br`,{}),`I’m continuously learning new technologies, experimenting with modern design trends, and improving my skills in frontend engineering, responsive design, animations, glassmorphism UI, enterprise theming, and user experience optimization to keep my work innovative and impactful.`]}),(0,x.jsxs)(`div`,{className:`about-stats`,children:[(0,x.jsxs)(`div`,{className:`stat-item`,children:[(0,x.jsx)(`span`,{className:`stat-icon`,children:`💼`}),(0,x.jsxs)(`div`,{children:[(0,x.jsx)(`strong`,{children:`Experience`}),(0,x.jsx)(`span`,{children:`2+ Years`})]})]}),(0,x.jsxs)(`div`,{className:`stat-item`,children:[(0,x.jsx)(`span`,{className:`stat-icon`,children:`📍`}),(0,x.jsxs)(`div`,{children:[(0,x.jsx)(`strong`,{children:`Location`}),(0,x.jsx)(`span`,{children:`South Triangle, Quezon City, Philippines`})]})]}),(0,x.jsxs)(`div`,{className:`stat-item`,children:[(0,x.jsx)(`span`,{className:`stat-icon avail`,children:`●`}),(0,x.jsxs)(`div`,{children:[(0,x.jsx)(`strong`,{children:`Availability`}),(0,x.jsx)(`span`,{className:`open`,children:`Open to work`})]})]})]})]})]})}),(0,x.jsxs)(`section`,{id:`skills`,className:`skills-section`,children:[(0,x.jsx)(`p`,{className:`section-tag centered`,children:`MY SKILLS`}),(0,x.jsx)(`h2`,{className:`section-heading centered`,children:`Technologies I work with`}),(0,x.jsx)(`div`,{className:`skills-loop-wrapper`,children:(0,x.jsx)(gn,{logos:jr,speed:50,direction:`left`,logoHeight:40,gap:40,scaleOnHover:!0,fadeOut:!0,fadeOutColor:`#0b0b0b`,ariaLabel:`Skills and technologies`})})]}),(0,x.jsxs)(`section`,{id:`projects`,className:`projects-section`,children:[(0,x.jsx)(`p`,{className:`section-tag centered`,children:`MY PROJECTS`}),(0,x.jsx)(`h2`,{className:`section-heading centered`,children:`Some of my recent work`}),(0,x.jsx)(`div`,{className:`projects-grid`,children:Mr.map(e=>(0,x.jsx)(Nr,{project:e,onOpenPreview:f},e.title))})]}),o&&(0,x.jsxs)(`div`,{className:`project-preview-modal`,children:[(0,x.jsx)(`div`,{className:`project-preview-backdrop`,onClick:m}),(0,x.jsxs)(`div`,{className:`project-preview-card`,children:[(0,x.jsx)(`button`,{className:`preview-close-button`,onClick:m,"aria-label":`Close preview`,children:`×`}),(0,x.jsxs)(`div`,{className:`project-preview-body`,children:[(0,x.jsx)(`div`,{className:`preview-image-wrap`,children:o.image?(0,x.jsx)(`img`,{src:o.image,alt:o.title}):(0,x.jsx)(`div`,{className:`preview-placeholder`,children:`Demo Preview`})}),(0,x.jsxs)(`div`,{className:`preview-info`,children:[(0,x.jsx)(`p`,{className:`section-tag`,children:`PROJECT PREVIEW`}),(0,x.jsx)(`h2`,{children:o.title}),o.extraDesc?(0,x.jsx)(`p`,{className:`preview-extra-desc`,children:o.extraDesc}):(0,x.jsx)(`p`,{children:o.desc}),o.techStack?.length>0&&(0,x.jsxs)(`div`,{className:`preview-tech-stack`,children:[(0,x.jsx)(`p`,{className:`section-tag`,children:`Tech Stack`}),(0,x.jsx)(`div`,{className:`preview-stack-list`,children:o.techStack.map(e=>(0,x.jsx)(`span`,{className:`preview-stack-item`,children:e},e))})]}),(0,x.jsxs)(`div`,{className:`preview-actions`,children:[(0,x.jsxs)(`button`,{type:`button`,className:`link-demo link-demo-button`,onClick:p,children:[(0,x.jsx)(`span`,{role:`img`,"aria-label":`eye`,children:`👁`}),` Live Demo`]}),(0,x.jsx)(`button`,{type:`button`,className:`preview-secondary`,onClick:m,children:`Close`})]})]})]})]})]}),h&&(0,x.jsx)(h,{onClose:()=>a(null),project:i}),(0,x.jsx)(`section`,{id:`contact`,className:`contact-section`,children:(0,x.jsxs)(`div`,{className:`contact-container`,children:[(0,x.jsxs)(`div`,{className:`contact-info`,children:[(0,x.jsx)(`p`,{className:`section-tag`,children:`CONTACT ME`}),(0,x.jsx)(`h2`,{children:`Let's work together!`}),(0,x.jsx)(`p`,{children:`I'm currently open to new opportunities. Feel free to reach out to me.`}),(0,x.jsxs)(`div`,{className:`contact-details`,children:[(0,x.jsxs)(`div`,{className:`contact-item`,children:[(0,x.jsx)(`span`,{className:`contact-icon`,children:`✉`}),(0,x.jsx)(`span`,{children:`seguenzajhonruel02@gmail.com`})]}),(0,x.jsxs)(`div`,{className:`contact-item`,children:[(0,x.jsx)(`span`,{className:`contact-icon`,children:`📞`}),(0,x.jsx)(`span`,{children:`+63 961 564 3632`})]}),(0,x.jsxs)(`div`,{className:`contact-item`,children:[(0,x.jsx)(`span`,{className:`contact-icon`,children:`📍`}),(0,x.jsx)(`span`,{children:`Philippines`})]})]})]}),(0,x.jsxs)(`form`,{className:`contact-form`,onSubmit:d,children:[(0,x.jsxs)(`div`,{className:`form-row`,children:[(0,x.jsx)(`input`,{type:`text`,name:`name`,placeholder:`Your Name`,value:e.name,onChange:u,required:!0}),(0,x.jsx)(`input`,{type:`email`,name:`email`,placeholder:`Your Email`,value:e.email,onChange:u,required:!0})]}),(0,x.jsx)(`input`,{type:`text`,name:`subject`,placeholder:`Subject`,value:e.subject,onChange:u,required:!0}),(0,x.jsx)(`textarea`,{name:`message`,placeholder:`Message`,rows:`5`,value:e.message,onChange:u,required:!0}),(0,x.jsxs)(`button`,{type:`submit`,className:`btn-send`,disabled:n,children:[n?`Sending...`:`Send Message`,` `,(0,x.jsx)(`span`,{children:`✈`})]})]})]})}),(0,x.jsxs)(`footer`,{className:`footer`,children:[(0,x.jsx)(`p`,{children:`© 2026 Jhonrlsgnz. All rights reserved.`}),(0,x.jsxs)(`div`,{className:`footer-socials`,children:[(0,x.jsx)(`a`,{href:`#`,"aria-label":`GitHub`,children:(0,x.jsx)(`svg`,{viewBox:`0 0 24 24`,fill:`currentColor`,width:`20`,height:`20`,children:(0,x.jsx)(`path`,{d:`M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12`})})}),(0,x.jsx)(`a`,{href:`https://www.linkedin.com/in/jhon-ruel-seguenza`,"aria-label":`LinkedIn`,children:(0,x.jsx)(`svg`,{viewBox:`0 0 24 24`,fill:`currentColor`,width:`20`,height:`20`,children:(0,x.jsx)(`path`,{d:`M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z`})})}),(0,x.jsx)(`a`,{href:`#`,"aria-label":`Scroll to top`,onClick:e=>{e.preventDefault(),window.scrollTo({top:0,behavior:`smooth`})},children:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,width:`20`,height:`20`,children:[(0,x.jsx)(`circle`,{cx:`12`,cy:`12`,r:`10`}),(0,x.jsx)(`polyline`,{points:`16 12 12 8 8 12`}),(0,x.jsx)(`line`,{x1:`12`,y1:`16`,x2:`12`,y2:`8`})]})})]})]})]})}function Fr(){return(0,x.jsxs)(x.Fragment,{children:[(0,x.jsx)(S,{}),(0,x.jsx)(Kt,{}),(0,x.jsx)(Pr,{})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,x.jsx)(_.StrictMode,{children:(0,x.jsx)(Fr,{})}));
+                    `}),n===`landing`&&(0,x.jsxs)(`div`,{style:{fontFamily:`'Open Sans', sans-serif`,color:`#444`},children:[(0,x.jsx)(`link`,{href:`https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap`,rel:`stylesheet`}),(0,x.jsx)(rr,{onLoginClick:()=>r(`login`)}),(0,x.jsx)(ir,{}),(0,x.jsx)(ar,{}),(0,x.jsx)(cr,{}),(0,x.jsx)(ur,{}),(0,x.jsx)(dr,{})]}),n===`login`&&(0,x.jsx)(`div`,{style:{height:`100%`,overflow:`hidden`},children:(0,x.jsx)(nr,{onBack:()=>r(`landing`),onLogin:()=>r(`dashboard`)})}),n===`dashboard`&&(0,x.jsx)(`div`,{style:{height:`100%`,overflow:`hidden`},children:(0,x.jsx)(Sr,{onLogout:()=>r(`landing`)})})]})]})]})}var wr=`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Flip Seven — Scoreboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#0B3533;
+  --surface:#0D3A37;
+  --card:#0F4742;
+  --card-hover:#155550;
+  --border:#1A6560;
+  --border-hi:#2B8A82;
+  --gold:#F5C842;
+  --gold-hi:#FFD966;
+  --gold-lo:#A8882A;
+  --gold-glow:rgba(245,200,66,0.22);
+  --ivory:#F5EDD6;
+  --ivory-dim:#B0A484;
+  --red:#E84B2A;
+  --red-hi:#FF6B4A;
+  --red-glow:rgba(232,75,42,0.25);
+  --teal:#2BBFB3;
+  --teal-hi:#4DD9CC;
+  --teal-glow:rgba(43,191,179,0.2);
+  --purple:#6B2D7A;
+  --skyblue:#6BB8D4;
+  --green:#2BBFB3;
+  --green-hi:#4DD9CC;
+  --muted:#3D9990;
+  --chip:#092E2B;
+  --shadow:rgba(0,0,0,0.5);
+  --cashout:#6BB8D4;
+  --cashout-glow:rgba(107,184,212,0.22);
+}
+
+html,body{min-height:100vh;background:var(--bg);font-family:'Inter',sans-serif;color:var(--ivory);overflow-x:hidden;}
+
+body::before{
+  content:'';position:fixed;inset:0;
+  background:
+    radial-gradient(ellipse 100% 50% at 50% -10%,rgba(245,200,66,0.12) 0%,transparent 55%),
+    radial-gradient(ellipse 60% 40% at 80% 80%,rgba(43,191,179,0.08) 0%,transparent 50%);
+  pointer-events:none;z-index:0;
+}
+#card-canvas{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.45;}
+body>*{position:relative;z-index:1}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes dealCard{
+  0%{opacity:0;transform:translateY(-60px) rotate(-8deg) scale(0.8)}
+  65%{transform:translateY(6px) rotate(1.5deg) scale(1.03)}
+  100%{opacity:1;transform:translateY(0) rotate(0) scale(1)}
+}
+@keyframes chipPop{
+  0%{opacity:0;transform:scale(0) rotate(-15deg)}
+  55%{transform:scale(1.25) rotate(3deg)}
+  100%{opacity:1;transform:scale(1) rotate(0)}
+}
+@keyframes bustShake{
+  0%,100%{transform:translateX(0) rotate(0)}
+  15%{transform:translateX(-8px) rotate(-2deg)}
+  30%{transform:translateX(8px) rotate(2deg)}
+  45%{transform:translateX(-6px) rotate(-1deg)}
+  60%{transform:translateX(6px) rotate(1deg)}
+  75%{transform:translateX(-3px)}
+}
+@keyframes goldRing{
+  0%,100%{box-shadow:0 0 0 0 rgba(212,168,67,0),0 4px 24px rgba(0,0,0,0.4)}
+  50%{box-shadow:0 0 0 5px rgba(245,200,66,0.25),0 4px 24px rgba(0,0,0,0.4)}
+}
+@keyframes scoreFlip{
+  0%{opacity:0;transform:translateY(-10px) scale(0.9)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes crownBounce{
+  0%{opacity:0;transform:translateY(-20px) scale(0.5) rotate(-20deg)}
+  60%{transform:translateY(4px) scale(1.2) rotate(5deg)}
+  100%{opacity:1;transform:translateY(0) scale(1) rotate(0)}
+}
+@keyframes badgeSpin{
+  0%{opacity:0;transform:scale(0) rotate(-90deg)}
+  70%{transform:scale(1.15) rotate(5deg)}
+  100%{opacity:1;transform:scale(1) rotate(0)}
+}
+@keyframes particleBurst{
+  0%{opacity:1;transform:translate(0,0) scale(1)}
+  100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)}
+}
+@keyframes toastSlide{
+  0%{opacity:0;transform:translateX(-50%) translateY(16px) scale(0.92)}
+  100%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}
+}
+@keyframes toastFade{
+  0%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}
+  100%{opacity:0;transform:translateX(-50%) translateY(-12px) scale(0.92)}
+}
+@keyframes logoReveal{
+  0%{opacity:0;letter-spacing:18px;filter:blur(4px)}
+  100%{opacity:1;letter-spacing:5px;filter:blur(0)}
+}
+@keyframes suitDrift{
+  0%,100%{transform:translateY(0) rotate(0) scale(1);opacity:0.25}
+  33%{transform:translateY(-10px) rotate(6deg) scale(1.05);opacity:0.4}
+  66%{transform:translateY(-5px) rotate(-3deg) scale(0.97);opacity:0.3}
+}
+@keyframes screenEnter{
+  0%{opacity:0;transform:scale(0.97) translateY(10px)}
+  100%{opacity:1;transform:scale(1) translateY(0)}
+}
+@keyframes screenExit{
+  0%{opacity:1;transform:scale(1)}
+  100%{opacity:0;transform:scale(0.96) translateY(-8px)}
+}
+@keyframes winnerReveal{
+  0%{opacity:0;transform:scale(0.85)}
+  60%{transform:scale(1.03)}
+  100%{opacity:1;transform:scale(1)}
+}
+@keyframes confettiFall{
+  0%{transform:translateY(-10px) rotate(0) scale(1);opacity:1}
+  100%{transform:translateY(80px) rotate(var(--rot)) scale(0.5);opacity:0}
+}
+@keyframes numberRoll{
+  0%{transform:translateY(100%);opacity:0}
+  100%{transform:translateY(0);opacity:1}
+}
+@keyframes cashoutPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(123,104,238,0),0 4px 24px rgba(0,0,0,0.4)}
+  50%{box-shadow:0 0 0 4px rgba(107,184,212,0.3),0 4px 24px rgba(0,0,0,0.4)}
+}
+
+#app{min-height:100vh;display:flex;flex-direction:column}
+
+.header{padding:32px 24px 8px;text-align:center;position:relative;}
+.header-suits{position:absolute;top:20px;left:0;right:0;display:flex;justify-content:space-between;padding:0 20px;pointer-events:none;}
+.header-suits span{font-size:26px;color:var(--teal);animation:suitDrift 4s ease-in-out infinite;}
+.header-suits span:nth-child(1){animation-delay:0s}
+.header-suits span:nth-child(2){animation-delay:1s}
+.header-suits span:nth-child(3){animation-delay:2s}
+.header-suits span:nth-child(4){animation-delay:0.5s}
+.logo{font-family:'Oswald',sans-serif;font-size:clamp(38px,9vw,56px);font-weight:700;color:var(--gold);letter-spacing:5px;text-transform:uppercase;animation:logoReveal 1s cubic-bezier(0.22,1,0.36,1) both;line-height:1;text-shadow:0 2px 0 var(--purple),0 0 40px rgba(245,200,66,0.35);}
+.logo em{color:var(--ivory);font-style:normal}
+.logo-rule{width:60px;height:2px;background:var(--gold);margin:8px auto 4px;opacity:0.7;}
+.logo-sub{font-size:10px;letter-spacing:4px;color:var(--teal);text-transform:uppercase;font-weight:400;}
+
+.screen{display:none;padding:20px 16px 48px;max-width:720px;margin:0 auto;width:100%;}
+.screen.active{display:block;animation:screenEnter 0.4s cubic-bezier(0.22,1,0.36,1) both}
+.screen.exit{animation:screenExit 0.25s cubic-bezier(0.22,1,0.36,1) both}
+
+.setup-wrap{background:var(--card);border:2px solid var(--gold);border-radius:24px;padding:32px 24px;box-shadow:0 8px 48px rgba(0,0,0,0.4);}
+.panel-title{font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;text-align:center;}
+.player-entry{display:flex;align-items:center;gap:10px;margin-bottom:10px;animation:fadeDown 0.3s cubic-bezier(0.22,1,0.36,1) both;}
+.p-swatch{width:12px;height:12px;border-radius:50%;flex-shrink:0;box-shadow:0 0 6px currentColor;}
+.p-input{flex:1;background:var(--chip);border:1px solid var(--border);border-radius:12px;color:var(--ivory);font-family:'Inter',sans-serif;font-size:14px;padding:11px 14px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;}
+.p-input::placeholder{color:var(--muted)}
+.p-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-glow)}
+.rm-btn{width:36px;height:36px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all 0.18s;flex-shrink:0;}
+.rm-btn:hover{border-color:var(--red);color:var(--red-hi);background:rgba(192,56,56,0.08)}
+.sep{height:1px;background:var(--border);margin:18px 0}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;border-radius:14px;border:none;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.22s;letter-spacing:0.3px;}
+.btn-primary{background:linear-gradient(135deg,var(--red) 0%,#C03010 100%);color:var(--ivory);box-shadow:0 4px 20px rgba(232,75,42,0.35);}
+.btn-primary:hover{background:linear-gradient(135deg,var(--red-hi) 0%,var(--red) 100%);transform:translateY(-2px);box-shadow:0 6px 28px rgba(232,75,42,0.45)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--muted);margin-top:10px;}
+.btn-ghost:hover{border-color:var(--muted);color:var(--ivory);background:rgba(255,255,255,0.03)}
+.hint{font-size:11px;color:var(--muted);text-align:center;margin-top:14px;letter-spacing:0.5px}
+
+.round-strip{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding:0 4px;animation:fadeDown 0.4s cubic-bezier(0.22,1,0.36,1) both;}
+.rnd-nav{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border-hi);background:transparent;color:var(--gold);font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.18s;}
+.rnd-nav:hover{background:var(--gold-glow);border-color:var(--gold)}
+.round-info{text-align:center}
+.round-info .lbl{font-size:10px;letter-spacing:3px;color:var(--muted);text-transform:uppercase}
+.round-info .num{font-family:'Oswald',sans-serif;font-size:32px;font-weight:700;color:var(--gold);line-height:1;}
+
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-bottom:18px;}
+
+.pcard{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:0 0 14px;overflow:hidden;position:relative;animation:dealCard 0.55s cubic-bezier(0.22,1,0.36,1) both;transition:border-color 0.3s,background 0.3s,transform 0.2s,box-shadow 0.3s;box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+.pcard:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+.pcard.state-bust{border-color:var(--red);background:#2A0D06;box-shadow:0 4px 24px var(--red-glow);animation:bustShake 0.5s cubic-bezier(0.22,1,0.36,1) both;}
+.pcard.state-seven{border-color:var(--gold);animation:goldRing 1.8s ease-in-out infinite;}
+.pcard.state-cashout{border-color:var(--cashout);background:#0A2A33;animation:cashoutPulse 2s ease-in-out infinite;}
+.pcard.state-lead{border-color:rgba(212,168,67,0.35)}
+.pcard.state-done{opacity:0.65;}
+
+.pcard-stripe{height:4px;width:100%;margin-bottom:14px;transition:background 0.3s;}
+.pcard-inner{padding:0 13px}
+.pcard-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.avatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;color:var(--bg);border:2px solid transparent;transition:border-color 0.3s;}
+.p-label{font-size:13px;font-weight:500;color:var(--ivory);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;}
+.crown-icon{font-size:15px;flex-shrink:0;animation:crownBounce 0.45s cubic-bezier(0.22,1,0.36,1) both;}
+
+.big-score{font-family:'Oswald',sans-serif;font-size:52px;font-weight:700;line-height:1;text-align:center;margin-bottom:2px;color:var(--ivory);transition:color 0.3s;animation:scoreFlip 0.25s cubic-bezier(0.22,1,0.36,1) both;overflow:hidden;}
+.big-score.c-bust{color:var(--red-hi)}
+.big-score.c-seven{color:var(--gold)}
+.big-score.c-cashout{color:var(--cashout)}
+
+.status-tag{text-align:center;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;height:16px;line-height:16px;transition:color 0.3s;margin-bottom:8px;}
+.status-tag.t-bust{color:var(--red-hi)}
+.status-tag.t-seven{color:var(--gold)}
+.status-tag.t-safe{color:var(--muted)}
+.status-tag.t-cashout{color:var(--cashout)}
+
+.progress-track{height:3px;background:var(--border);border-radius:2px;margin-bottom:10px;overflow:hidden;}
+.progress-fill{height:100%;border-radius:2px;transition:width 0.4s cubic-bezier(0.22,1,0.36,1),background 0.3s;}
+
+.chips-area{display:flex;flex-wrap:wrap;gap:4px;min-height:26px;margin-bottom:8px;}
+.chip{background:var(--chip);border:1px solid var(--border-hi);border-radius:7px;padding:3px 8px;font-family:'Oswald',sans-serif;font-size:13px;color:var(--teal);cursor:pointer;transition:border-color 0.15s,color 0.15s,transform 0.15s;animation:chipPop 0.32s cubic-bezier(0.22,1,0.36,1) both;user-select:none;}
+.chip:hover{border-color:var(--red);color:var(--red-hi);transform:scale(1.1)}
+.chip.chip-gold{color:var(--gold);border-color:var(--gold-lo);background:rgba(212,168,67,0.07)}
+.chip.chip-neg{color:var(--skyblue);border-color:#1A4560}
+.chip.chip-dup{color:var(--red-hi);border-color:var(--red);background:rgba(192,56,56,0.12);box-shadow:0 0 6px var(--red-glow);}
+.chip.chip-sc{color:#F97316;border-color:#7A3800;background:rgba(249,115,22,0.1);}
+
+.inp-row{display:flex;gap:6px;align-items:center}
+.val-input{flex:1;min-width:0;background:var(--chip);border:1px solid var(--border);border-radius:10px;color:var(--ivory);font-family:'Oswald',sans-serif;font-size:17px;padding:8px 6px;text-align:center;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-moz-appearance:textfield;}
+.val-input::-webkit-inner-spin-button,.val-input::-webkit-outer-spin-button{-webkit-appearance:none}
+.val-input::placeholder{color:var(--muted);font-size:11px;font-family:'Inter',sans-serif}
+.val-input:focus{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-glow)}
+.val-input:disabled{opacity:0.35;cursor:not-allowed}
+
+.plus-btn{width:34px;height:34px;border-radius:10px;flex-shrink:0;background:var(--gold);border:none;color:#1A1200;font-size:22px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.18s,transform 0.15s;line-height:1;}
+.plus-btn:hover{background:var(--gold-hi)}
+.plus-btn:active{transform:scale(0.9)}
+.plus-btn:disabled{background:var(--muted);cursor:not-allowed;opacity:0.4}
+
+.cashout-btn{width:100%;margin-top:6px;padding:7px 10px;border-radius:10px;border:1px solid var(--cashout);background:rgba(123,104,238,0.08);color:var(--cashout);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s;letter-spacing:0.5px;}
+.cashout-btn:hover{background:rgba(123,104,238,0.18);transform:translateY(-1px)}
+.cashout-btn:disabled{opacity:0.3;cursor:not-allowed;transform:none}
+
+.sc-btn{width:100%;margin-top:4px;padding:6px 10px;border-radius:10px;border:1px solid #7A3800;background:rgba(249,115,22,0.06);color:#F97316;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;cursor:pointer;transition:all 0.2s;letter-spacing:0.5px;}
+.sc-btn:hover{background:rgba(249,115,22,0.14);transform:translateY(-1px)}
+.sc-btn:disabled{opacity:0.3;cursor:not-allowed;transform:none}
+
+.ptotal{text-align:center;font-size:11px;color:var(--muted);margin-top:8px;}
+.ptotal b{color:var(--ivory-dim);font-family:'Oswald',sans-serif;font-size:13px}
+
+.cbadge{position:absolute;top:14px;right:11px;border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;animation:badgeSpin 0.35s cubic-bezier(0.22,1,0.36,1) both;}
+.cbadge-bust{background:var(--red);color:#fff}
+.cbadge-seven{background:var(--gold);color:var(--bg)}
+.cbadge-cashout{background:var(--cashout);color:#0B2A35}
+.cbadge-sc{background:#F97316;color:#fff}
+
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:18px;}
+.ab{display:flex;align-items:center;gap:6px;padding:10px 18px;border-radius:12px;cursor:pointer;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;border:1px solid var(--border);background:transparent;color:var(--muted);transition:all 0.2s;}
+.ab:hover{background:rgba(255,255,255,0.04);border-color:var(--muted);color:var(--ivory);transform:translateY(-1px)}
+.ab-primary{background:linear-gradient(135deg,var(--gold),#C49030);border-color:var(--gold);color:#1A1200;font-weight:700;box-shadow:0 3px 14px rgba(245,200,66,0.3);}
+.ab-primary:hover{background:linear-gradient(135deg,var(--gold-hi),var(--gold));box-shadow:0 5px 20px rgba(245,200,66,0.4)}
+.ab-danger{border-color:rgba(192,56,56,0.35);color:var(--red-hi)}
+.ab-danger:hover{background:rgba(192,56,56,0.07);border-color:var(--red)}
+.ab-active{border-color:var(--gold-lo);color:var(--gold)}
+
+.lb-panel{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:14px;animation:fadeUp 0.45s cubic-bezier(0.22,1,0.36,1) 0.1s both;}
+.lb-panel .panel-title{text-align:left;margin-bottom:14px}
+.lb-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(26,101,96,0.5);transition:all 0.2s;}
+.lb-row:last-child{border-bottom:none}
+.lb-rank{font-family:'Oswald',sans-serif;font-size:13px;color:var(--muted);width:24px;text-align:center;flex-shrink:0;}
+.lb-rank.r1{color:var(--gold);font-size:18px}
+.lb-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.lb-name{flex:1;font-size:13px;font-weight:500;color:var(--ivory)}
+.lb-score{font-family:'Oswald',sans-serif;font-size:22px;font-weight:600;color:var(--ivory);}
+.lb-score.busted{color:var(--red-hi);text-decoration:line-through;font-size:14px}
+.lb-bar-wrap{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}
+.lb-bar-track{height:2px;background:var(--border);border-radius:2px;overflow:hidden}
+.lb-bar-fill{height:100%;border-radius:2px;transition:width 0.5s cubic-bezier(0.22,1,0.36,1)}
+
+.hist-panel{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:14px;overflow-x:auto;animation:fadeUp 0.35s cubic-bezier(0.22,1,0.36,1) both;}
+.htable{width:100%;border-collapse:collapse;font-size:12px;min-width:280px}
+.htable th{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;padding:5px 10px;border-bottom:1px solid var(--border);text-align:center;}
+.htable th.left{text-align:left}
+.htable td{padding:8px 10px;text-align:center;font-family:'Oswald',sans-serif;font-size:15px;color:var(--teal);border-bottom:1px solid rgba(26,101,96,0.4);}
+.htable tr:last-child td{border-bottom:none}
+.htable td.td-name{text-align:left;color:var(--ivory);font-family:'Inter',sans-serif;font-size:12px}
+.htable td.td-bust{color:var(--red-hi)}
+.htable td.td-cashout{color:var(--cashout)}
+.htable td.td-total{color:var(--gold);font-weight:600}
+
+.rule-note{background:rgba(43,191,179,0.06);border:1px solid rgba(43,191,179,0.25);border-radius:12px;padding:10px 14px;margin-bottom:16px;font-size:11px;color:var(--ivory-dim);line-height:1.6;animation:fadeDown 0.3s cubic-bezier(0.22,1,0.36,1) both;}
+.rule-note b{color:var(--gold)}
+
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:var(--card-hover);border:1px solid var(--border-hi);border-radius:14px;padding:12px 24px;font-size:14px;font-weight:500;color:var(--ivory);pointer-events:none;z-index:999;white-space:nowrap;animation:toastSlide 0.3s cubic-bezier(0.22,1,0.36,1) both;box-shadow:0 8px 32px rgba(0,0,0,0.5);}
+.toast.out{animation:toastFade 0.28s cubic-bezier(0.22,1,0.36,1) both}
+
+.particle{position:fixed;pointer-events:none;z-index:998;border-radius:50%;animation:particleBurst 0.7s ease-out both;}
+
+.winner-bg{position:fixed;inset:0;z-index:100;background:rgba(6,28,27,0.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;animation:fadeIn 0.4s ease both;}
+.winner-trophy{font-size:80px;animation:crownBounce 0.6s cubic-bezier(0.22,1,0.36,1) 0.2s both}
+.winner-label{font-size:11px;letter-spacing:4px;color:var(--muted);text-transform:uppercase}
+.winner-name{font-family:'Oswald',sans-serif;font-size:42px;font-weight:700;color:var(--gold);letter-spacing:3px;text-align:center;animation:winnerReveal 0.5s cubic-bezier(0.22,1,0.36,1) 0.3s both;text-shadow:0 2px 0 var(--purple),0 0 40px rgba(245,200,66,0.5);}
+.winner-pts{font-family:'Oswald',sans-serif;font-size:72px;font-weight:700;color:var(--ivory);line-height:1;animation:numberRoll 0.4s cubic-bezier(0.22,1,0.36,1) 0.5s both;}
+.winner-pts-lbl{font-size:12px;color:var(--muted);letter-spacing:2px}
+.winner-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.wa-btn{padding:12px 28px;border-radius:14px;cursor:pointer;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;border:none;transition:all 0.2s;}
+.wa-gold{background:var(--gold);color:#1A1200}
+.wa-gold:hover{background:var(--gold-hi);transform:translateY(-2px)}
+.wa-outline{background:transparent;border:1px solid var(--border-hi);color:var(--ivory-dim)}
+.wa-outline:hover{border-color:var(--muted);color:var(--ivory)}
+.confetti-piece{position:fixed;width:8px;height:8px;pointer-events:none;z-index:101;animation:confettiFall 1.2s ease-in both;}
+.demo-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* or whatever fixed height your modal uses */
+}
+
+.mos-system {
+    flex: 1;
+    min-height: 0;
+}
+@media(max-width:480px){
+  .logo{font-size:34px}
+  .pgrid{grid-template-columns:repeat(2,1fr)}
+  .big-score{font-size:42px}
+  .actions{gap:8px}
+  .ab{padding:9px 13px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="card-canvas"></canvas>
+<div id="app">
+
+  <header class="header">
+    <div class="header-suits"><span>🃏°🂱⋆ 🎲 .🂱࿔*🃏</span><span>♠</span><span>♥</span><span>♦</span><span>♣</span><span>🎲</span><span>🃏</span>
+    <span>🎴</span><span>🃏°🂱⋆ 🎲 .🂱࿔*🃏</span></div>
+    <div class="logo">Flip <em>Seven</em></div>
+    <div class="logo-rule"></div>
+    <div class="logo-sub">∘₊✧─────✧₊∘ Scoreboard by Jhonrlgnz ∘₊✧─────✧₊∘</div>
+  </header>
+
+  <section class="screen active" id="s-setup">
+    <div class="setup-wrap">
+      <div class="panel-title">Players</div>
+      <div id="player-list"></div>
+      <button class="btn btn-ghost" id="add-player-btn" style="margin-bottom:4px">+ Add player</button>
+      <div class="sep"></div>
+      <button class="btn btn-primary" id="start-btn">♠ &nbsp;Deal the cards</button>
+      <p class="hint">You bust when you flip a card matching a value you already have · Cashout to lock your score</p>
+    </div>
+  </section>
+
+  <section class="screen" id="s-game">
+    <div class="round-strip">
+      <button class="rnd-nav" id="prev-rnd">‹</button>
+      <div class="round-info">
+        <div class="lbl">Round</div>
+        <div class="num" id="rnd-num">1</div>
+      </div>
+      <button class="rnd-nav" id="next-rnd">›</button>
+    </div>
+
+    <div class="rule-note">
+      <b>Bust rule:</b> Drawing a card with a value you already hold this round = Bust (score 0 this round).<br>
+      <b>Cashout:</b> Stop drawing anytime to lock in your current sum. &nbsp;·&nbsp; <b>Second Chance</b> card absorbs one bust.
+    </div>
+
+    <div class="pgrid" id="pgrid"></div>
+
+    <div class="actions">
+      <button class="ab ab-primary" id="end-rnd-btn">✓ &nbsp;End round</button>
+      <button class="ab" id="hist-btn">↩ History</button>
+      <button class="ab ab-danger" id="new-game-btn">↺ New game</button>
+    </div>
+
+    <div class="lb-panel" id="lb-panel">
+      <div class="panel-title">Leaderboard</div>
+      <div id="lb-body"></div>
+    </div>
+
+    <div class="hist-panel" id="hist-panel" style="display:none">
+      <div class="panel-title">Round History</div>
+      <div id="hist-body"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+const COLORS=['#4CAF80','#64B5F6','#FFB74D','#F06292','#BA68C8','#4DD0E1','#A5D6A7','#FF8A65'];
+const SECOND_CHANCE_VAL = 'SC';
+const FLIP_SEVEN_VAL = 7;
+
+let G = { players:[], round:1, playerState:{}, history:[] };
+
+function freshPlayerState(){ return { cards:[], status:'active', hasSecondChance:false, usedSecondChance:false }; }
+
+function initSetup(){
+  const list=document.getElementById('player-list');
+  list.innerHTML='';
+  ['Player 1','Player 2','Player 3','Player 4'].forEach(n=>addPlayerRow(n));
+}
+function addPlayerRow(name=''){
+  const list=document.getElementById('player-list');
+  const idx=list.children.length;
+  const color=COLORS[idx%COLORS.length];
+  const row=document.createElement('div');
+  row.className='player-entry';
+  row.style.animationDelay=(idx*0.06)+'s';
+  row.innerHTML=\`
+    <div class="p-swatch" style="background:\${color};color:\${color}"></div>
+    <input class="p-input pn-inp" type="text" placeholder="Player \${idx+1}" value="\${name}" maxlength="14"/>
+    <button class="rm-btn" title="Remove">✕</button>
+  \`;
+  row.querySelector('.rm-btn').onclick=()=>{
+    if(list.children.length>2){
+      row.style.transition='opacity 0.2s,transform 0.2s';
+      row.style.opacity='0';row.style.transform='translateX(20px)';
+      setTimeout(()=>row.remove(),200);
+    }
+  };
+  list.appendChild(row);
+}
+document.getElementById('add-player-btn').onclick=()=>{
+  if(document.getElementById('player-list').children.length<8) addPlayerRow('');
+};
+document.getElementById('start-btn').onclick=()=>{
+  const names=[...document.querySelectorAll('.pn-inp')].map(i=>i.value.trim()).filter(Boolean);
+  if(names.length<2){toast('Add at least 2 players');return;}
+  G.players=names.map((name,i)=>({name,color:COLORS[i%COLORS.length],totalScore:0}));
+  G.round=1;G.history=[];
+  resetRoundState();
+  goTo('s-game');
+  renderGame();
+};
+
+function resetRoundState(){
+  G.playerState={};
+  G.players.forEach(p=>{ G.playerState[p.name]=freshPlayerState(); });
+}
+
+function goTo(id){
+  const cur=document.querySelector('.screen.active');
+  if(cur){ cur.classList.add('exit'); setTimeout(()=>cur.classList.remove('active','exit'),250); }
+  setTimeout(()=>document.getElementById(id).classList.add('active'),cur?200:0);
+}
+
+document.getElementById('prev-rnd').onclick=()=>{if(G.round>1){G.round--;renderGame();}};
+document.getElementById('next-rnd').onclick=()=>{ G.round++; resetRoundState(); renderGame(); };
+
+function endRound(){
+  const snap={};
+  G.players.forEach(p=>{
+    const ps=G.playerState[p.name];
+    const numCards=ps.cards.filter(v=>v!==SECOND_CHANCE_VAL);
+    const sum=numCards.reduce((a,v)=>a+v,0);
+    const bust=ps.status==='bust';
+    const cashedOut=ps.status==='cashout';
+    const seven=ps.status==='seven';
+    snap[p.name]={ cards:[...ps.cards], sum, bust, cashedOut, seven };
+    if(!bust) p.totalScore+=sum;
+  });
+  G.history.push({round:G.round,data:snap});
+  const rnum=G.round;
+  G.round++;
+  resetRoundState();
+  toast(\`Round \${rnum} locked ✓\`);
+  renderGame();
+  if(document.getElementById('hist-panel').style.display!=='none') renderHistory();
+}
+document.getElementById('end-rnd-btn').onclick=endRound;
+
+document.getElementById('new-game-btn').onclick=()=>{
+  G={players:[],round:1,playerState:{},history:[]};
+  document.getElementById('hist-panel').style.display='none';
+  document.getElementById('hist-btn').classList.remove('ab-active');
+  initSetup();
+  goTo('s-setup');
+};
+
+document.getElementById('hist-btn').onclick=()=>{
+  const p=document.getElementById('hist-panel');
+  const open=p.style.display!=='none';
+  p.style.display=open?'none':'block';
+  document.getElementById('hist-btn').classList.toggle('ab-active',!open);
+  if(!open) renderHistory();
+};
+
+function wouldBust(ps, val){
+  if(val===SECOND_CHANCE_VAL) return false;
+  const existing=ps.cards.filter(v=>v!==SECOND_CHANCE_VAL);
+  return existing.includes(val);
+}
+
+function addCard(pi, rawVal){
+  const player=G.players[pi];
+  const ps=G.playerState[player.name];
+  if(ps.status==='bust'||ps.status==='cashout') return;
+  let val;
+  if(typeof rawVal==='string'&&rawVal.trim().toUpperCase()==='SC'){
+    val=SECOND_CHANCE_VAL;
+  } else {
+    val=parseInt(rawVal);
+    if(isNaN(val)){
+      document.getElementById('vi-'+pi)?.focus();
+      return;
+    }
+  }
+  if(val!==SECOND_CHANCE_VAL && wouldBust(ps, val)){
+    if(ps.hasSecondChance && !ps.usedSecondChance){
+      ps.usedSecondChance=true;
+      toast(\`\${player.name} used Second Chance! Duplicate \${val} discarded 🍀\`,'');
+      spawnParticles(document.getElementById('vi-'+pi),'#F97316',14);
+    } else {
+      ps.cards.push(val);
+      ps.status='bust';
+      spawnParticles(document.getElementById('vi-'+pi),'#C03838',16);
+      toast(\`\${player.name} BUST! Duplicate \${val} 💥\`);
+    }
+  } else {
+    ps.cards.push(val);
+    if(val===SECOND_CHANCE_VAL){
+      ps.hasSecondChance=true;
+    }
+    const numCards=ps.cards.filter(v=>v!==SECOND_CHANCE_VAL);
+    const sum=numCards.reduce((a,v)=>a+v,0);
+    if(numCards.includes(FLIP_SEVEN_VAL) && ps.status==='active'){
+      ps.status='seven';
+      spawnParticles(document.getElementById('vi-'+pi),'#D4A843',20);
+      toast(\`\${player.name} FLIP SEVEN! 🃏\`);
+    }
+  }
+  const inp=document.getElementById('vi-'+pi);
+  if(inp) inp.value='';
+  renderGame();
+  setTimeout(()=>document.getElementById('vi-'+pi)?.focus(),30);
+}
+
+function cashOut(pi){
+  const player=G.players[pi];
+  const ps=G.playerState[player.name];
+  if(ps.status!=='active'&&ps.status!=='seven') return;
+  ps.status='cashout';
+  const numCards=ps.cards.filter(v=>v!==SECOND_CHANCE_VAL);
+  const sum=numCards.reduce((a,v)=>a+v,0);
+  spawnParticles(document.getElementById('vi-'+pi),'#7B68EE',12);
+  toast(\`\${player.name} cashed out with \${sum} pts ✔\`);
+  const allDone=G.players.every(p=>{
+    const s=G.playerState[p.name].status;
+    return s==='bust'||s==='cashout';
+  });
+  if(allDone){
+    setTimeout(()=>endRound(),600);
+  } else {
+    renderGame();
+  }
+}
+
+function removeCard(pi, idx){
+  const player=G.players[pi];
+  const ps=G.playerState[player.name];
+  if(ps.status==='bust'||ps.status==='cashout') return;
+  const removed=ps.cards[idx];
+  ps.cards.splice(idx,1);
+  ps.hasSecondChance=ps.cards.includes(SECOND_CHANCE_VAL);
+  if(!ps.hasSecondChance) ps.usedSecondChance=false;
+  const numCards=ps.cards.filter(v=>v!==SECOND_CHANCE_VAL);
+  const vals=numCards;
+  const hasDup=vals.length!==new Set(vals).size;
+  if(hasDup && !ps.hasSecondChance) ps.status='bust';
+  else if(vals.includes(FLIP_SEVEN_VAL)) ps.status='seven';
+  else ps.status='active';
+  renderGame();
+}
+
+function renderGame(){
+  document.getElementById('rnd-num').textContent=G.round;
+  const grid=document.getElementById('pgrid');
+  grid.innerHTML='';
+  const sorted=[...G.players].sort((a,b)=>b.totalScore-a.totalScore);
+  const leadName=sorted[0]?.name;
+  G.players.forEach((player,pi)=>{
+    const ps=G.playerState[player.name];
+    const numCards=ps.cards.filter(v=>v!==SECOND_CHANCE_VAL);
+    const sum=numCards.reduce((a,v)=>a+v,0);
+    const isBust=ps.status==='bust';
+    const isCashout=ps.status==='cashout';
+    const isSeven=ps.status==='seven';
+    const isActive=ps.status==='active';
+    const isDone=isBust||isCashout;
+    const isLead=player.name===leadName&&sorted[0]?.totalScore>0&&!isBust;
+    let state='';
+    if(isBust) state='state-bust';
+    else if(isSeven) state='state-seven';
+    else if(isCashout) state='state-cashout';
+    else if(isLead) state='state-lead';
+    if(isDone && !isBust) state+=' state-done';
+    let scoreClass='';
+    if(isBust) scoreClass='c-bust';
+    else if(isSeven) scoreClass='c-seven';
+    else if(isCashout) scoreClass='c-cashout';
+    let stText='Flip a card',stClass='t-safe';
+    if(isBust){stText='BUSTED!';stClass='t-bust';}
+    else if(isSeven){stText='FLIP SEVEN!';stClass='t-seven';}
+    else if(isCashout){stText='CASHED OUT';stClass='t-cashout';}
+    else if(sum>0) stText=\`\${numCards.length} card\${numCards.length!==1?'s':''}\`;
+    const stripeColor=isBust?'var(--red)':isSeven?'var(--gold)':isCashout?'var(--cashout)':isLead?'rgba(212,168,67,0.5)':player.color+'55';
+    const valCounts={};
+    numCards.forEach(v=>{ valCounts[v]=(valCounts[v]||0)+1; });
+    const chipsHtml=ps.cards.map((v,i)=>{
+      if(v===SECOND_CHANCE_VAL){
+        return \`<span class="chip chip-sc" data-pi="\${pi}" data-i="\${i}" title="Second Chance">SC</span>\`;
+      }
+      const isDup=valCounts[v]>1;
+      const cls=isDup?'chip chip-dup':(v===7?'chip chip-gold':v<0?'chip chip-neg':'chip');
+      return \`<span class="\${cls}" data-pi="\${pi}" data-i="\${i}">\${v>0?'+'+v:v}</span>\`;
+    }).join('');
+    const badgeHtml=isBust?'<div class="cbadge cbadge-bust">Bust</div>':
+                    isSeven?'<div class="cbadge cbadge-seven">7!</div>':
+                    isCashout?'<div class="cbadge cbadge-cashout">Out</div>':
+                    ps.hasSecondChance&&!ps.usedSecondChance?'<div class="cbadge cbadge-sc">SC</div>':'';
+    const inputDisabled=isDone?'disabled':'';
+    const div=document.createElement('div');
+    div.className='pcard '+state;
+    div.style.animationDelay=(pi*0.07)+'s';
+    div.innerHTML=\`
+      <div class="pcard-stripe" style="background:\${stripeColor}"></div>
+      \${badgeHtml}
+      <div class="pcard-inner">
+        <div class="pcard-head">
+          <div class="avatar" style="background:\${player.color};border-color:\${player.color}">\${player.name.slice(0,2).toUpperCase()}</div>
+          <div class="p-label">\${player.name}</div>
+          \${isLead&&!isBust?'<span class="crown-icon">👑</span>':''}
+        </div>
+        <div class="big-score \${scoreClass}">\${isBust?'✗':sum}</div>
+        <div class="status-tag \${stClass}">\${stText}</div>
+        <div class="chips-area" id="ca-\${pi}">\${chipsHtml}</div>
+        <div class="inp-row">
+          <input class="val-input" type="text" placeholder="\${isDone?'—':'Value or SC'}" id="vi-\${pi}" autocomplete="off" \${inputDisabled}/>
+          <button class="plus-btn" data-pi="\${pi}" \${inputDisabled}>+</button>
+        </div>
+        <button class="cashout-btn" data-pi="\${pi}" \${isDone||!isActive&&!isSeven?'disabled':''}>
+          \${isCashout?'✔ Cashed out':'⊘ Cash out'}
+        </button>
+        <div class="ptotal">Total: <b>\${player.totalScore}</b></div>
+      </div>
+    \`;
+    grid.appendChild(div);
+    div.querySelector('.plus-btn').onclick=()=>{
+      const inp=document.getElementById('vi-'+pi);
+      addCard(pi, inp?.value||'');
+    };
+    div.querySelector('.val-input').onkeydown=e=>{
+      if(e.key==='Enter') addCard(pi, e.target.value);
+    };
+    div.querySelector('.cashout-btn').onclick=()=>cashOut(pi);
+  });
+  document.querySelectorAll('.chip').forEach(chip=>{
+    chip.onclick=()=>{
+      const pi=+chip.dataset.pi;
+      const i=+chip.dataset.i;
+      const ps=G.playerState[G.players[pi].name];
+      if(ps.status==='bust'||ps.status==='cashout') return;
+      removeCard(pi,i);
+    };
+  });
+  renderLeaderboard();
+}
+
+function renderLeaderboard(){
+  const sorted=[...G.players].sort((a,b)=>b.totalScore-a.totalScore);
+  const top=sorted[0]?.totalScore||1;
+  document.getElementById('lb-body').innerHTML=sorted.map((p,i)=>{
+    const ps=G.playerState[p.name];
+    const bust=ps?.status==='bust';
+    const barW=Math.round((p.totalScore/Math.max(top,1))*100);
+    return \`<div class="lb-row">
+      <div class="lb-rank \${i===0?'r1':''}">\${i===0?'★':i+1}</div>
+      <div class="lb-dot" style="background:\${p.color}"></div>
+      <div class="lb-bar-wrap">
+        <div class="lb-name">\${p.name}</div>
+        <div class="lb-bar-track"><div class="lb-bar-fill" style="width:\${barW}%;background:\${p.color}"></div></div>
+      </div>
+      <div class="lb-score \${bust?'busted':''}">\${p.totalScore}\${bust?' 💥':''}</div>
+    </div>\`;
+  }).join('');
+}
+
+function renderHistory(){
+  const wrap=document.getElementById('hist-body');
+  if(!G.history.length){
+    wrap.innerHTML='<p style="color:var(--muted);font-size:13px;text-align:center;padding:8px 0">No rounds completed yet.</p>';
+    return;
+  }
+  const names=G.players.map(p=>p.name);
+  wrap.innerHTML=\`<table class="htable"><thead><tr>
+    <th class="left">Player</th>
+    \${G.history.map(h=>\`<th>R\${h.round}</th>\`).join('')}
+    <th>Total</th>
+  </tr></thead><tbody>
+    \${names.map(n=>\`<tr>
+      <td class="td-name">\${n}</td>
+      \${G.history.map(h=>{
+        const d=h.data[n];
+        if(!d) return '<td>—</td>';
+        if(d.bust) return \`<td class="td-bust">✗</td>\`;
+        if(d.cashedOut) return \`<td class="td-cashout">+\${d.sum}✔</td>\`;
+        return \`<td>+\${d.sum}</td>\`;
+      }).join('')}
+      <td class="td-total">\${G.players.find(p=>p.name===n)?.totalScore||0}</td>
+    </tr>\`).join('')}
+  </tbody></table>\`;
+}
+
+function spawnParticles(el,color,count=12){
+  const target=el||document.body;
+  const r=target.getBoundingClientRect?target.getBoundingClientRect():{left:window.innerWidth/2,top:window.innerHeight/2,width:0,height:0};
+  const cx=r.left+r.width/2,cy=r.top+r.height/2;
+  for(let i=0;i<count;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    const angle=(i/count)*Math.PI*2+Math.random()*0.4;
+    const dist=28+Math.random()*40;
+    const size=4+Math.random()*5;
+    p.style.cssText=\`left:\${cx}px;top:\${cy}px;width:\${size}px;height:\${size}px;background:\${color};--tx:\${Math.cos(angle)*dist}px;--ty:\${Math.sin(angle)*dist}px;animation-delay:\${Math.random()*0.08}s\`;
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(),800);
+  }
+}
+
+let _tt;
+function toast(msg){
+  const ex=document.querySelector('.toast');
+  if(ex)ex.remove();
+  clearTimeout(_tt);
+  const el=document.createElement('div');
+  el.className='toast';
+  el.textContent=msg;
+  document.body.appendChild(el);
+  _tt=setTimeout(()=>{el.classList.add('out');setTimeout(()=>el.remove(),300);},2800);
+}
+
+(function(){
+  const canvas=document.getElementById('card-canvas');
+  const ctx=canvas.getContext('2d');
+  const SUITS=['♠','♥','♦','♣'];
+  const VALUES=['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+  const RED_SUITS=['♥','♦'];
+  function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+  const CW=42, CH=58, CR=5;
+  function randomCard(){
+    const suit=SUITS[Math.floor(Math.random()*SUITS.length)];
+    const val=VALUES[Math.floor(Math.random()*VALUES.length)];
+    const isRed=RED_SUITS.includes(suit);
+    return {
+      x: Math.random()*window.innerWidth,
+      y: -CH - Math.random()*window.innerHeight,
+      vx: (Math.random()-0.5)*0.6,
+      vy: 0.6 + Math.random()*1.1,
+      rot: (Math.random()-0.5)*0.4,
+      vrot: (Math.random()-0.5)*0.018,
+      suit, val, isRed,
+      alpha: 0.12 + Math.random()*0.18,
+      scale: 0.75 + Math.random()*0.55,
+    };
+  }
+  const CARD_COUNT=28;
+  const cards=Array.from({length:CARD_COUNT},()=>{
+    const c=randomCard();
+    c.y=Math.random()*window.innerHeight;
+    return c;
+  });
+  function drawCard(c){
+    ctx.save();
+    ctx.translate(c.x, c.y);
+    ctx.rotate(c.rot);
+    ctx.scale(c.scale, c.scale);
+    ctx.globalAlpha=c.alpha;
+    const w=CW, h=CH, r=CR;
+    ctx.beginPath();
+    ctx.moveTo(-w/2+r,-h/2);
+    ctx.lineTo(w/2-r,-h/2);ctx.arcTo(w/2,-h/2,w/2,-h/2+r,r);
+    ctx.lineTo(w/2,h/2-r);ctx.arcTo(w/2,h/2,w/2-r,h/2,r);
+    ctx.lineTo(-w/2+r,h/2);ctx.arcTo(-w/2,h/2,-w/2,h/2-r,r);
+    ctx.lineTo(-w/2,-h/2+r);ctx.arcTo(-w/2,-h/2,-w/2+r,-h/2,r);
+    ctx.closePath();
+    ctx.fillStyle='#0B3533';
+    ctx.fill();
+    ctx.strokeStyle=c.isRed?'rgba(232,75,42,0.6)':'rgba(245,200,66,0.5)';
+    ctx.lineWidth=1;
+    ctx.stroke();
+    ctx.beginPath();
+    const pad=3;
+    ctx.rect(-w/2+pad,-h/2+pad,w-pad*2,h-pad*2);
+    ctx.strokeStyle=c.isRed?'rgba(232,75,42,0.2)':'rgba(245,200,66,0.18)';
+    ctx.lineWidth=0.5;
+    ctx.stroke();
+    const color=c.isRed?'#E84B2A':'#F5C842';
+    ctx.fillStyle=color;
+    ctx.font="bold 9px 'Inter',sans-serif";
+    ctx.textAlign='left';
+    ctx.textBaseline='top';
+    ctx.fillText(c.val,-w/2+4,-h/2+3);
+    ctx.font="10px serif";
+    ctx.fillText(c.suit,-w/2+4,-h/2+13);
+    ctx.font="bold 20px serif";
+    ctx.textAlign='center';
+    ctx.textBaseline='middle';
+    ctx.fillText(c.suit,0,0);
+    ctx.save();
+    ctx.rotate(Math.PI);
+    ctx.font="bold 9px 'Inter',sans-serif";
+    ctx.textAlign='left';
+    ctx.textBaseline='top';
+    ctx.fillText(c.val,-w/2+4,-h/2+3);
+    ctx.font="10px serif";
+    ctx.fillText(c.suit,-w/2+4,-h/2+13);
+    ctx.restore();
+    ctx.restore();
+  }
+  function tick(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    cards.forEach(c=>{
+      c.x+=c.vx;
+      c.y+=c.vy;
+      c.rot+=c.vrot;
+      c.vx+=(Math.random()-0.5)*0.01;
+      c.vx=Math.max(-1,Math.min(1,c.vx));
+      drawCard(c);
+      if(c.y > canvas.height + CH*2){
+        const fresh=randomCard();
+        Object.assign(c,fresh);
+      }
+    });
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+initSetup();
+<\/script>
+</body>
+</html>`;function Tr({onClose:e,project:t}){let n=(0,_.useRef)(null);return(0,_.useEffect)(()=>{let t=document.body.style.overflow,n=t=>{t.key===`Escape`&&e?.()};return document.body.style.overflow=`hidden`,window.addEventListener(`keydown`,n),()=>{document.body.style.overflow=t,window.removeEventListener(`keydown`,n)}},[e]),(0,x.jsxs)(`div`,{className:`demo-modal`,role:`dialog`,"aria-modal":`true`,"aria-label":`Flip Seven ScoreBoard demo`,children:[(0,x.jsx)(`button`,{type:`button`,className:`demo-modal-backdrop`,"aria-label":`Close demo`,onClick:e}),(0,x.jsxs)(`div`,{className:`demo-shell`,children:[(0,x.jsxs)(`header`,{className:`demo-topbar`,children:[(0,x.jsxs)(`div`,{className:`demo-topbar-left`,children:[(0,x.jsx)(`button`,{type:`button`,className:`demo-back`,onClick:e,"aria-label":`Back`,children:`< Back`}),(0,x.jsxs)(`div`,{children:[(0,x.jsx)(`p`,{className:`demo-kicker`,children:`Personal project for Flip Seven`}),(0,x.jsx)(`h2`,{children:`Flip Seven ScoreBoard`})]})]}),(0,x.jsxs)(`div`,{className:`demo-topbar-right`,children:[(0,x.jsx)(`span`,{className:`demo-close-hint`,children:`Press Esc or close`}),(0,x.jsx)(`button`,{type:`button`,className:`demo-close`,onClick:e,children:`Close`})]})]}),(0,x.jsx)(`div`,{className:`mos-system`,style:{position:`relative`,flex:1,minHeight:0,overflow:`hidden`},children:(0,x.jsx)(`iframe`,{ref:n,title:`Flip Seven ScoreBoard`,srcDoc:wr,sandbox:`allow-scripts allow-same-origin`,style:{position:`absolute`,top:0,left:0,width:`100%`,height:`100%`,border:`none`}})})]})]})}var Er=`/Jhonrlsgnz/assets/municipalOrdinance-DN4MtpdX.png`,Dr=`/Jhonrlsgnz/assets/salesManagementSystem-BeTOgZ7n.png`,Or=`/Jhonrlsgnz/assets/spms-Bcd5x_G3.png`,kr=`/Jhonrlsgnz/assets/flip7-DO9cFVeS.png`,Ar=`service_lph0pdv`,jr=`template_bnx61ik`,Mr=`3XjyGUgkZ4Lvg9VjQ`,Nr=[{name:`React`,level:5,color:`#61DAFB`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#61DAFB`,children:[(0,x.jsx)(`circle`,{cx:`12`,cy:`12`,r:`2.5`}),(0,x.jsx)(`ellipse`,{cx:`12`,cy:`12`,rx:`10`,ry:`4`,fill:`none`,stroke:`#61DAFB`,strokeWidth:`1.2`}),(0,x.jsx)(`ellipse`,{cx:`12`,cy:`12`,rx:`10`,ry:`4`,fill:`none`,stroke:`#61DAFB`,strokeWidth:`1.2`,transform:`rotate(60 12 12)`}),(0,x.jsx)(`ellipse`,{cx:`12`,cy:`12`,rx:`10`,ry:`4`,fill:`none`,stroke:`#61DAFB`,strokeWidth:`1.2`,transform:`rotate(120 12 12)`})]})},{name:`JavaScript`,level:5,color:`#F7DF1E`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#F7DF1E`,children:[(0,x.jsx)(`rect`,{width:`24`,height:`24`,rx:`2`,fill:`#F7DF1E`}),(0,x.jsx)(`path`,{d:`M7 18.5c.5.8 1.2 1.4 2.4 1.4 1.4 0 2.2-.7 2.2-1.9V12H9.8v5.9c0 .5-.2.8-.7.8-.5 0-.8-.3-1.1-.7L7 18.5zm6.6-.2c.6 1 1.5 1.6 2.9 1.6 1.5 0 2.6-.8 2.6-2.1 0-1.2-.7-1.8-2-2.3l-.6-.2c-.7-.3-.9-.5-.9-.9 0-.4.3-.6.7-.6.5 0 .8.2 1 .7l1.4-.9c-.6-1-1.4-1.4-2.4-1.4-1.4 0-2.4.9-2.4 2.2 0 1.1.7 1.8 1.9 2.2l.6.2c.7.3 1 .5 1 1s-.4.8-.9.8c-.7 0-1.1-.4-1.4-.9l-1.5.6z`,fill:`#333`})]})},{name:`HTML5`,level:5,color:`#E34F26`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#E34F26`,children:[(0,x.jsx)(`path`,{d:`M4.136 18.948L2.5 2.5h19l-1.638 16.444L12 21.5l-7.864-2.552z`}),(0,x.jsx)(`path`,{d:`M12 19.98l6.35-1.76 1.4-15.72H12v17.48z`,fill:`#EF652A`}),(0,x.jsx)(`path`,{d:`M12 10.5H8.9l-.21-2.38H12V5.88H6.27l.56 6.25H12V10.5zm0 5.82l-.01.003-3.16-.853-.202-2.266H6.34l.396 4.44 5.26 1.46.004-.001V16.32z`,fill:`#fff`}),(0,x.jsx)(`path`,{d:`M12 10.5v2.13h2.89l-.272 3.04-2.618.706v2.223l5.27-1.46.039-.43.6-6.72.063-.7H12zm0-4.62v2.22h5.56l.046-.52.105-1.17.055-.53H12z`,fill:`#EBEBEB`})]})},{name:`CSS3`,level:5,color:`#1572B6`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#1572B6`,children:[(0,x.jsx)(`path`,{d:`M4.136 18.948L2.5 2.5h19l-1.638 16.444L12 21.5l-7.864-2.552z`}),(0,x.jsx)(`path`,{d:`M12 19.98l6.35-1.76 1.4-15.72H12v17.48z`,fill:`#33A9DC`}),(0,x.jsx)(`path`,{d:`M12 8.1H8.7l.22 2.4H12V8.1zm0-2.22H6.27l.22 2.22H12V5.88zm0 8.5l-2.63-.71-.17-1.96H6.86l.35 3.89 4.79 1.33V14.38zm0-2.5h-2.6l-.09-1.28H12v-2.1H7.7l.58 6.63L12 16.24v-4.36z`,fill:`#fff`}),(0,x.jsx)(`path`,{d:`M12 8.1v2.4h3.08l-.29 3.12-2.79.76v2.27l4.79-1.33.04-.4.6-6.82H12zm0-2.22v2.22h6.08l.05-.52.11-1.17.06-.53H12z`,fill:`#EBEBEB`})]})},{name:`PowerApps`,level:4,color:`#742774`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,children:[(0,x.jsx)(`rect`,{width:`24`,height:`24`,rx:`4`,fill:`#742774`}),(0,x.jsx)(`path`,{d:`M12 3L4 8v8l8 5 8-5V8L12 3z`,fill:`url(#paGrad)`}),(0,x.jsx)(`defs`,{children:(0,x.jsxs)(`linearGradient`,{id:`paGrad`,x1:`4`,y1:`3`,x2:`20`,y2:`21`,gradientUnits:`userSpaceOnUse`,children:[(0,x.jsx)(`stop`,{stopColor:`#C663C8`}),(0,x.jsx)(`stop`,{offset:`1`,stopColor:`#6B1F6B`})]})}),(0,x.jsx)(`path`,{d:`M12 7l-5 3v4l5 3 5-3v-4L12 7z`,fill:`rgba(255,255,255,0.15)`}),(0,x.jsx)(`path`,{d:`M9 12l2 2 4-4`,stroke:`white`,strokeWidth:`1.5`,strokeLinecap:`round`,strokeLinejoin:`round`})]})},{name:`SQL`,level:4,color:`#4479A1`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`#4479A1`,children:[(0,x.jsx)(`ellipse`,{cx:`12`,cy:`6`,rx:`8`,ry:`3`,fill:`#4479A1`}),(0,x.jsx)(`path`,{d:`M4 6v4c0 1.66 3.58 3 8 3s8-1.34 8-3V6`,fill:`#5B8DB8`}),(0,x.jsx)(`path`,{d:`M4 10v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4`,fill:`#4479A1`}),(0,x.jsx)(`path`,{d:`M4 14v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4`,fill:`#5B8DB8`})]})},{name:`Photoshop`,level:4,color:`#31A8FF`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,children:[(0,x.jsx)(`rect`,{width:`24`,height:`24`,rx:`3`,fill:`#001E36`}),(0,x.jsx)(`text`,{x:`3`,y:`17`,fontSize:`10`,fontWeight:`bold`,fill:`#31A8FF`,fontFamily:`Arial, sans-serif`,children:`Ps`})]})},{name:`Illustrator`,level:4,color:`#FF9A00`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,children:[(0,x.jsx)(`rect`,{width:`24`,height:`24`,rx:`3`,fill:`#330000`}),(0,x.jsx)(`text`,{x:`3`,y:`17`,fontSize:`10`,fontWeight:`bold`,fill:`#FF9A00`,fontFamily:`Arial, sans-serif`,children:`Ai`})]})},{name:`Figma`,level:4,color:`#F24E1E`,icon:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,children:[(0,x.jsx)(`rect`,{x:`8`,y:`2`,width:`8`,height:`6`,rx:`3`,fill:`#F24E1E`}),(0,x.jsx)(`rect`,{x:`8`,y:`9`,width:`8`,height:`6`,rx:`3`,fill:`#FF7262`}),(0,x.jsx)(`rect`,{x:`8`,y:`16`,width:`8`,height:`6`,rx:`3`,fill:`#0ACF83`}),(0,x.jsx)(`rect`,{x:`2`,y:`2`,width:`6`,height:`6`,rx:`3`,fill:`#A259FF`}),(0,x.jsx)(`circle`,{cx:`5`,cy:`12`,r:`3`,fill:`#1ABCFE`})]})}].map(e=>({node:e.icon,title:e.name,href:`#`})),Pr=[{title:`Truck, Trailer, and Driver Management System`,desc:`A system for managing trucks, trailers, and drivers with counting capacity dashboards.`,extraDesc:`A truck, trailer, and driver management system enables fleet managers to track vehicle availability, assign drivers, monitor maintenance schedules, and optimize routing. It includes inventory tracking, capacity planning, driver assignments, and dashboard analytics to streamline operations and ensure efficient transportation management.`,image:null,color:`#1e3a5f`,techStack:[`React`,`JavaScript`,`CSS`,`Fleet Tracking`,`Capacity Dashboards`],demo:`#`,demoType:`truck-trailer-driver`},{title:`Sales Management System`,desc:`A system for managing sales, tracking performance, and generating reports for ASM, Forecast, DCT, SFT, and EXD.`,extraDesc:`A Sales Management System centralizes sales tracking, performance monitoring, and reporting for regional teams. It supports lead tracking, revenue forecasting, sales order management, and dashboard insights to improve decision making and boost sales productivity.`,image:Dr,color:`#1a2e4a`,techStack:[`Google Sheets`,`Google Apps Script`,`Google Gspread API`,`Sheets API`,`Pivot Tables`],demo:`#`,demoType:`sales-management`},{title:`Strategic Performance Management System`,desc:`A system for managing and tracking strategic performance indicators.`,extraDesc:`A Strategic Performance Management System helps organizations track KPIs, align goals, and monitor progress across departments. It provides dashboards for target setting, scorecards, analytics, and reporting to support better strategy execution and business performance.`,image:Or,color:`#1e3040`,techStack:[`React`,`Charting`,`KPI Tracking`,`Dashboard UX`],demo:`#`,demoType:`spms`},{title:`Municipal Ordinance`,desc:`A system for managing and tracking municipal ordinances and regulations.`,extraDesc:`A Municipal Ordinance System is a web-based application designed to help Local Government Units (LGUs) manage, monitor, and organize municipal ordinances and regulations digitally. The system allows users to create, review, approve, track, and archive ordinances efficiently. It includes features such as dashboard analytics, ordinance management, barangay tracking, approval workflows, reporting, notifications, and user role management. The goal of the system is to improve efficiency, reduce paperwork, enhance transparency, and simplify the monitoring of local laws and regulations within municipalities and barangays.`,image:Er,color:`#1e3040`,techStack:[`React`,`JavaScript`,`CSS`,`Responsive UI`],demo:null,demoType:`municipal-ordinance`},{title:`Flip Seven ScoreBoard`,desc:`A card-based scoreboard for tracking scores in a game or competition.`,extraDesc:`A card-based scoreboard system designed for tracking scores in games or competitions. It features a visually engaging interface where players can flip cards to reveal their scores, making it ideal for interactive gaming events, trivia nights, or any competitive setting. The system allows for easy score updates, player management, and can be customized with different themes and styles to enhance the user experience.`,image:kr,color:`#1e3040`,techStack:[`React`,`JavaScript`,`CSS`,`Responsive UI`],demo:`null`,demoType:`FlipSevenScoreBoard`}];function Fr({project:e,onOpenPreview:t}){return(0,x.jsxs)(`div`,{className:`project-card`,children:[(0,x.jsx)(`div`,{className:`project-img`,style:{background:e.color},children:e.image?(0,x.jsx)(`img`,{src:e.image,alt:e.title,className:`project-img-inner`}):(0,x.jsxs)(`div`,{className:`project-mockup`,children:[(0,x.jsx)(`div`,{className:`mockup-bar`}),(0,x.jsx)(`div`,{className:`mockup-row`}),(0,x.jsx)(`div`,{className:`mockup-row short`}),(0,x.jsx)(`div`,{className:`mockup-grid`,children:[...[,,,,]].map((e,t)=>(0,x.jsx)(`div`,{className:`mockup-cell`},t))})]})}),(0,x.jsxs)(`div`,{className:`project-info`,children:[(0,x.jsx)(`h3`,{children:e.title}),(0,x.jsx)(`p`,{children:e.desc}),(0,x.jsx)(`div`,{className:`project-links`,children:[`municipal-ordinance`,`truck-trailer-driver`,`sales-management`,`spms`,`FlipSevenScoreBoard`].includes(e.demoType)?(0,x.jsxs)(`button`,{type:`button`,className:`link-demo link-demo-button`,onClick:()=>t(e),children:[`View `,(0,x.jsx)(`span`,{children:`↗`})]}):e.demo?(0,x.jsxs)(`a`,{href:e.demo,className:`link-demo`,target:`_blank`,rel:`noreferrer`,children:[`Live Demo `,(0,x.jsx)(`span`,{children:`↗`})]}):(0,x.jsx)(`span`,{className:`link-demo link-demo-disabled`,children:`Demo coming soon`})})]})]})}function Ir(){let[e,t]=(0,_.useState)({name:``,email:``,subject:``,message:``}),[n,r]=(0,_.useState)(!1),[i,a]=(0,_.useState)(null),[o,s]=(0,_.useState)(null),c=(0,_.useRef)(``),l=(0,_.useRef)(``);(0,_.useEffect)(()=>{},[]),(0,_.useEffect)(()=>{if(o)return c.current=document.body.style.overflow,l.current=document.documentElement.style.overflow,document.body.style.overflow=`hidden`,document.documentElement.style.overflow=`hidden`,()=>{document.body.style.overflow=c.current,document.documentElement.style.overflow=l.current}},[o]);let u=n=>{t({...e,[n.target.name]:n.target.value})},d=async n=>{n.preventDefault(),r(!0);try{await hn.send(Ar,jr,{from_name:e.name,to_email:`seguenzajhonruel02@gmail.com`,reply_to:e.email,from_email:e.email,subject:e.subject,message:e.message},{publicKey:Mr}),alert(`✅ Message sent successfully! I'll get back to you soon.`),t({name:``,email:``,subject:``,message:``})}catch(e){let t=e?.status?` (status: ${e.status})`:``,n=e?.text||e?.message||`Unknown error`;alert(`❌ Failed to send message${t}: ${n}`),console.error(`EmailJS error:`,e)}finally{r(!1)}},f=e=>{s(e)},p=()=>{o&&(a(o),s(null))},m=()=>{s(null)},h=i?{"municipal-ordinance":Fn,"truck-trailer-driver":In,"sales-management":Ln,spms:Cr,FlipSevenScoreBoard:Tr}[i.demoType]:null;return(0,x.jsxs)(`main`,{children:[(0,x.jsx)(`section`,{id:`about`,className:`about-section`,children:(0,x.jsxs)(`div`,{className:`about-container`,children:[(0,x.jsx)(`div`,{className:`about-img-wrap`,children:(0,x.jsx)(`img`,{src:_n,alt:`About Jhon`,className:`about-img`})}),(0,x.jsxs)(`div`,{className:`about-text`,children:[(0,x.jsx)(`p`,{className:`section-tag`,children:`ABOUT ME`}),(0,x.jsx)(`h2`,{className:`about-heading`,children:`Building clean, scalable, and modern web apps..`}),(0,x.jsxs)(`p`,{className:`about-desc`,children:[`Hi, I’m Jhon — a Frontend Developer and Graphic Designer based in the Philippines, passionate about creating modern, responsive, and user-focused digital experiences. I specialize in building web applications, dashboards, and enterprise-style systems using technologies such as React, TypeScript, JavaScript, CSS, and modern UI/UX practices.`,(0,x.jsx)(`br`,{}),(0,x.jsx)(`br`,{}),`Over the years, I’ve worked on developing responsive admin dashboards, sales monitoring systems, user management modules, custom modals, advanced table settings, and interactive interfaces that focus on both performance and usability. I enjoy transforming complex workflows into clean, intuitive, and visually appealing designs while maintaining scalable and maintainable frontend architecture.`,(0,x.jsx)(`br`,{}),(0,x.jsx)(`br`,{}),`Aside from development, I also have experience in graphic design, branding, packaging design, and UI/UX design, working with clients from industries such as fashion, food, and technology. My design approach combines creativity, functionality, and attention to detail to create seamless user experiences.`,(0,x.jsx)(`br`,{}),(0,x.jsx)(`br`,{}),`I’m continuously learning new technologies, experimenting with modern design trends, and improving my skills in frontend engineering, responsive design, animations, glassmorphism UI, enterprise theming, and user experience optimization to keep my work innovative and impactful.`]}),(0,x.jsxs)(`div`,{className:`about-stats`,children:[(0,x.jsxs)(`div`,{className:`stat-item`,children:[(0,x.jsx)(`span`,{className:`stat-icon`,children:`💼`}),(0,x.jsxs)(`div`,{children:[(0,x.jsx)(`strong`,{children:`Experience`}),(0,x.jsx)(`span`,{children:`2+ Years`})]})]}),(0,x.jsxs)(`div`,{className:`stat-item`,children:[(0,x.jsx)(`span`,{className:`stat-icon`,children:`📍`}),(0,x.jsxs)(`div`,{children:[(0,x.jsx)(`strong`,{children:`Location`}),(0,x.jsx)(`span`,{children:`South Triangle, Quezon City, Philippines`})]})]}),(0,x.jsxs)(`div`,{className:`stat-item`,children:[(0,x.jsx)(`span`,{className:`stat-icon avail`,children:`●`}),(0,x.jsxs)(`div`,{children:[(0,x.jsx)(`strong`,{children:`Availability`}),(0,x.jsx)(`span`,{className:`open`,children:`Open to work`})]})]})]})]})]})}),(0,x.jsxs)(`section`,{id:`skills`,className:`skills-section`,children:[(0,x.jsx)(`p`,{className:`section-tag centered`,children:`MY SKILLS`}),(0,x.jsx)(`h2`,{className:`section-heading centered`,children:`Technologies I work with`}),(0,x.jsx)(`div`,{className:`skills-loop-wrapper`,children:(0,x.jsx)(gn,{logos:Nr,speed:50,direction:`left`,logoHeight:40,gap:40,scaleOnHover:!0,fadeOut:!0,fadeOutColor:`#0b0b0b`,ariaLabel:`Skills and technologies`})})]}),(0,x.jsxs)(`section`,{id:`projects`,className:`projects-section`,children:[(0,x.jsx)(`p`,{className:`section-tag centered`,children:`MY PROJECTS`}),(0,x.jsx)(`h2`,{className:`section-heading centered`,children:`Some of my recent work`}),(0,x.jsx)(`div`,{className:`projects-grid`,children:Pr.map(e=>(0,x.jsx)(Fr,{project:e,onOpenPreview:f},e.title))})]}),o&&(0,x.jsxs)(`div`,{className:`project-preview-modal`,children:[(0,x.jsx)(`div`,{className:`project-preview-backdrop`,onClick:m}),(0,x.jsxs)(`div`,{className:`project-preview-card`,children:[(0,x.jsx)(`button`,{className:`preview-close-button`,onClick:m,"aria-label":`Close preview`,children:`×`}),(0,x.jsxs)(`div`,{className:`project-preview-body`,children:[(0,x.jsx)(`div`,{className:`preview-image-wrap`,children:o.image?(0,x.jsx)(`img`,{src:o.image,alt:o.title}):(0,x.jsx)(`div`,{className:`preview-placeholder`,children:`Demo Preview`})}),(0,x.jsxs)(`div`,{className:`preview-info`,children:[(0,x.jsx)(`p`,{className:`section-tag`,children:`PROJECT PREVIEW`}),(0,x.jsx)(`h2`,{children:o.title}),o.extraDesc?(0,x.jsx)(`p`,{className:`preview-extra-desc`,children:o.extraDesc}):(0,x.jsx)(`p`,{children:o.desc}),o.techStack?.length>0&&(0,x.jsxs)(`div`,{className:`preview-tech-stack`,children:[(0,x.jsx)(`p`,{className:`section-tag`,children:`Tech Stack`}),(0,x.jsx)(`div`,{className:`preview-stack-list`,children:o.techStack.map(e=>(0,x.jsx)(`span`,{className:`preview-stack-item`,children:e},e))})]}),(0,x.jsxs)(`div`,{className:`preview-actions`,children:[(0,x.jsxs)(`button`,{type:`button`,className:`link-demo link-demo-button`,onClick:p,children:[(0,x.jsx)(`span`,{role:`img`,"aria-label":`eye`,children:`👁`}),` Live Demo`]}),(0,x.jsx)(`button`,{type:`button`,className:`preview-secondary`,onClick:m,children:`Close`})]})]})]})]})]}),h&&(0,x.jsx)(h,{onClose:()=>a(null),project:i}),(0,x.jsx)(`section`,{id:`contact`,className:`contact-section`,children:(0,x.jsxs)(`div`,{className:`contact-container`,children:[(0,x.jsxs)(`div`,{className:`contact-info`,children:[(0,x.jsx)(`p`,{className:`section-tag`,children:`CONTACT ME`}),(0,x.jsx)(`h2`,{children:`Let's work together!`}),(0,x.jsx)(`p`,{children:`I'm currently open to new opportunities. Feel free to reach out to me.`}),(0,x.jsxs)(`div`,{className:`contact-details`,children:[(0,x.jsxs)(`div`,{className:`contact-item`,children:[(0,x.jsx)(`span`,{className:`contact-icon`,children:`✉`}),(0,x.jsx)(`span`,{children:`seguenzajhonruel02@gmail.com`})]}),(0,x.jsxs)(`div`,{className:`contact-item`,children:[(0,x.jsx)(`span`,{className:`contact-icon`,children:`📞`}),(0,x.jsx)(`span`,{children:`+63 961 564 3632`})]}),(0,x.jsxs)(`div`,{className:`contact-item`,children:[(0,x.jsx)(`span`,{className:`contact-icon`,children:`📍`}),(0,x.jsx)(`span`,{children:`Philippines`})]})]})]}),(0,x.jsxs)(`form`,{className:`contact-form`,onSubmit:d,children:[(0,x.jsxs)(`div`,{className:`form-row`,children:[(0,x.jsx)(`input`,{type:`text`,name:`name`,placeholder:`Your Name`,value:e.name,onChange:u,required:!0}),(0,x.jsx)(`input`,{type:`email`,name:`email`,placeholder:`Your Email`,value:e.email,onChange:u,required:!0})]}),(0,x.jsx)(`input`,{type:`text`,name:`subject`,placeholder:`Subject`,value:e.subject,onChange:u,required:!0}),(0,x.jsx)(`textarea`,{name:`message`,placeholder:`Message`,rows:`5`,value:e.message,onChange:u,required:!0}),(0,x.jsxs)(`button`,{type:`submit`,className:`btn-send`,disabled:n,children:[n?`Sending...`:`Send Message`,` `,(0,x.jsx)(`span`,{children:`✈`})]})]})]})}),(0,x.jsxs)(`footer`,{className:`footer`,children:[(0,x.jsx)(`p`,{children:`© 2026 Jhonrlsgnz. All rights reserved.`}),(0,x.jsxs)(`div`,{className:`footer-socials`,children:[(0,x.jsx)(`a`,{href:`#`,"aria-label":`GitHub`,children:(0,x.jsx)(`svg`,{viewBox:`0 0 24 24`,fill:`currentColor`,width:`20`,height:`20`,children:(0,x.jsx)(`path`,{d:`M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12`})})}),(0,x.jsx)(`a`,{href:`https://www.linkedin.com/in/jhon-ruel-seguenza`,"aria-label":`LinkedIn`,children:(0,x.jsx)(`svg`,{viewBox:`0 0 24 24`,fill:`currentColor`,width:`20`,height:`20`,children:(0,x.jsx)(`path`,{d:`M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z`})})}),(0,x.jsx)(`a`,{href:`#`,"aria-label":`Scroll to top`,onClick:e=>{e.preventDefault(),window.scrollTo({top:0,behavior:`smooth`})},children:(0,x.jsxs)(`svg`,{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,width:`20`,height:`20`,children:[(0,x.jsx)(`circle`,{cx:`12`,cy:`12`,r:`10`}),(0,x.jsx)(`polyline`,{points:`16 12 12 8 8 12`}),(0,x.jsx)(`line`,{x1:`12`,y1:`16`,x2:`12`,y2:`8`})]})})]})]})]})}function Lr(){return(0,x.jsxs)(x.Fragment,{children:[(0,x.jsx)(S,{}),(0,x.jsx)(Kt,{}),(0,x.jsx)(Ir,{})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,x.jsx)(_.StrictMode,{children:(0,x.jsx)(Lr,{})}));
