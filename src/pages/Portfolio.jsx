@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import LogoLoop from "../components/LogoLoop";
 import aboutImg from "../assets/about.jpg";
@@ -10,6 +10,7 @@ import FlipSevenScoreBoard from "./demos/FlipSevenScoreBoard";
 import municipalOrdinance from "../assets/municipalOrdinance.png";
 import SalesManagementSystemImage from "../assets/salesManagementSystem.png";
 import spms from "../assets/spms.png";
+import flip7 from "../assets/flip7.png";
 
 // Use Vite env vars so keys are easier to manage across environments.
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -186,7 +187,7 @@ const projects = [
     title: "Flip Seven ScoreBoard",
     desc: "A card-based scoreboard for tracking scores in a game or competition.",
     extraDesc: "A card-based scoreboard system designed for tracking scores in games or competitions. It features a visually engaging interface where players can flip cards to reveal their scores, making it ideal for interactive gaming events, trivia nights, or any competitive setting. The system allows for easy score updates, player management, and can be customized with different themes and styles to enhance the user experience.",
-    image: null,
+    image: flip7,
     color: "#1e3040",
     techStack: ["React", "JavaScript", "CSS", "Responsive UI"],
     demo: "null",
@@ -242,12 +243,28 @@ export default function Portfolio() {
   const [sending, setSending] = useState(false);
   const [activeDemo, setActiveDemo] = useState(null);
   const [previewProject, setPreviewProject] = useState(null);
+  const previousBodyOverflow = useRef("");
+  const previousHtmlOverflow = useRef("");
 
   useEffect(() => {
     if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
       console.warn("EmailJS config is missing. Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY.");
     }
   }, []);
+
+  useEffect(() => {
+    if (!previewProject) return;
+
+    previousBodyOverflow.current = document.body.style.overflow;
+    previousHtmlOverflow.current = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow.current;
+      document.documentElement.style.overflow = previousHtmlOverflow.current;
+    };
+  }, [previewProject]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

@@ -432,7 +432,7 @@ function IPCRFormPage({ darkMode }) {
                 overflow: "hidden",
                 boxShadow: "0 4px 16px rgba(0,0,0,.1)"
             }}>
-                <div style={{ overflowX: "auto" }}>
+                <div className="hide-scrollbar" style={{ overflowX: "auto" }}>
                     <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "auto" }}>
                         {/* Column headers */}
                         <thead>
@@ -949,7 +949,7 @@ function Sidebar({ active, setActive, darkMode, setDarkMode, onLogout, collapsed
             <button onClick={() => setCollapsed(!collapsed)} style={{ position: "absolute", top: 20, right: -12, width: 24, height: 24, borderRadius: "50%", background: GOLD, border: "none", cursor: "pointer", fontSize: 12, fontWeight: 700, color: MAROON, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 20, boxShadow: "0 2px 6px rgba(0,0,0,.2)" }}>
                 {collapsed ? "›" : "‹"}
             </button>
-            <nav style={{ flex: 1, padding: "12px 0", overflowY: "auto" }}>
+            <nav className="hide-scrollbar" style={{ flex: 1, padding: "12px 0", overflowY: "auto" }}>
                 {NAV_ITEMS.map(item => {
                     const isActive = active === item.id;
                     return (
@@ -982,7 +982,7 @@ function Sidebar({ active, setActive, darkMode, setDarkMode, onLogout, collapsed
 function TopBar({ active, darkMode, user }) {
     const label = NAV_ITEMS.find(n => n.id === active)?.label || "Dashboard";
     return (
-        <div style={{ height: 56, background: darkMode ? "#1e0008" : MAROON, borderBottom: `2px solid ${GOLD}`, display: "flex", alignItems: "center", padding: "0 20px", gap: 12, flexShrink: 0 }}>
+        <div className="topbar-root" style={{ height: 56, background: darkMode ? "#1e0008" : MAROON, borderBottom: `2px solid ${GOLD}`, display: "flex", alignItems: "center", padding: "0 20px", gap: 12, flexShrink: 0 }}>
             <h2 style={{ flex: 1, margin: 0, fontSize: 16, fontWeight: 700, color: "#fff", fontFamily: "'Poppins', sans-serif", letterSpacing: .3 }}>{label}</h2>
             <div style={{ position: "relative" }}>
                 <input placeholder="Search here…" style={{ background: "rgba(254,186,41,.18)", border: `1px solid ${GOLD}`, borderRadius: 20, padding: "6px 14px 6px 32px", color: "#fff", fontSize: 13, fontFamily: "'Poppins', sans-serif", width: 220, outline: "none" }} />
@@ -1033,7 +1033,7 @@ function DashboardPage({ darkMode }) {
                     <span style={{ background: GOLD, width: 24, height: 24, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12 }}>⏱</span>
                     <h3 style={{ margin: 0, fontSize: 13, fontWeight: 700, color: dm ? GOLD : MAROON, fontFamily: "'Poppins', sans-serif" }}>Recent Activity</h3>
                 </div>
-                <div style={{ overflowX: "auto" }}>
+                <div className="hide-scrollbar" style={{ overflowX: "auto" }}>
                     <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Poppins', sans-serif" }}>
                         <thead>
                             <tr style={{ borderBottom: `2px solid ${dm ? "rgba(255,255,255,.1)" : "#f0e8d0"}` }}>
@@ -1109,7 +1109,7 @@ function IPCRPage({ darkMode }) {
                             <button key={k} onClick={() => setFilter(k)} style={{ padding: "4px 12px", borderRadius: 16, border: `1px solid ${filter === k ? MAROON : "#ddd"}`, background: filter === k ? MAROON : "transparent", color: filter === k ? "#fff" : sub, fontSize: 10, cursor: "pointer", fontFamily: "'Poppins', sans-serif", transition: "all .2s" }}>{k}</button>
                         ))}
                     </div>
-                    <div style={{ overflowX: "auto" }}>
+                    <div className="hide-scrollbar" style={{ overflowX: "auto" }}>
                         <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Poppins', sans-serif" }}>
                             <thead>
                                 <tr style={{ borderBottom: `2px solid ${dm ? "rgba(255,255,255,.1)" : "#f0e8d0"}` }}>
@@ -1187,7 +1187,7 @@ function OPCRPage({ darkMode }) {
                 ))}
             </div>
             <div style={{ background: card, borderRadius: 10, padding: 12, border: `1px solid ${dm ? "rgba(254,186,41,.1)" : "#f0e8d0"}` }}>
-                <div style={{ overflowX: "auto" }}>
+                <div className="hide-scrollbar" style={{ overflowX: "auto" }}>
                     <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Poppins', sans-serif" }}>
                         <thead>
                             <tr style={{ borderBottom: `2px solid ${dm ? "rgba(255,255,255,.1)" : "#f0e8d0"}` }}>
@@ -1283,7 +1283,7 @@ function TeachingPage({ darkMode }) {
                 ))}
             </div>
             <div style={{ background: card, borderRadius: 10, padding: 12, border: `1px solid ${dm ? "rgba(254,186,41,.1)" : "#f0e8d0"}` }}>
-                <div style={{ overflowX: "auto" }}>
+                <div className="hide-scrollbar" style={{ overflowX: "auto" }}>
                     <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Poppins', sans-serif" }}>
                         <thead>
                             <tr style={{ borderBottom: `2px solid ${dm ? "rgba(255,255,255,.1)" : "#f0e8d0"}` }}>
@@ -1497,10 +1497,12 @@ function DashboardSystem({ onLogout }) {
     return (
         <div style={{ display: "flex", height: "100%", overflow: "hidden", fontFamily: "'Poppins', sans-serif", background: dm ? "#12000a" : "#fffbf0" }}>
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+            <style>{`.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; } .hide-scrollbar::-webkit-scrollbar { width: 0; height: 0; }`}</style>
             <Sidebar active={active} setActive={setActive} darkMode={dm} setDarkMode={setDarkMode} onLogout={onLogout} collapsed={collapsed} setCollapsed={setCollapsed} />
             <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", minWidth: 0 }}>
                 <TopBar active={active} darkMode={dm} user={DEMO_USER} />
-                <div style={{ flex: 1, overflowY: "auto", scrollbarWidth: "none" }}>
+                {/* Mobile toggle handled via window event listener in component useEffect */}
+                <div className="hide-scrollbar" style={{ flex: 1, overflowY: "auto" }}>
                     {pages[active]}
                 </div>
             </div>
@@ -1550,8 +1552,29 @@ export default function SpmsDemo({ onClose, project }) {
                     }}
                 >
                     <style>{`
+                        /* Hide native scrollbars but keep scrolling */
                         .mos-system { scrollbar-width: none; -ms-overflow-style: none; }
-                        .mos-system::-webkit-scrollbar { width: 0; height: 0; }
+                        .mos-system::-webkit-scrollbar { width: 0; height: 0; background: transparent; }
+                        .hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+                        .hide-scrollbar::-webkit-scrollbar { width: 0; height: 0; }
+
+                        /* Dashboard area layout */
+                        .mos-system > * { height: 100%; }
+
+                        /* Desktop: keep sidebar visible */
+                        .mos-system aside { position: relative; display: block; }
+
+                        /* Tablet / small laptop */
+                        @media (max-width: 1100px) {
+                            .mos-system aside { width: 220px; }
+                        }
+
+                        /* Mobile: stack, hide sidebar */
+                        @media (max-width: 900px) {
+                            .mos-system aside { display: none; }
+                            /* Hide wide search inputs inside the dashboard on small screens */
+                            .mos-system input[placeholder^="Search"] { display: none !important; }
+                        }
                     `}</style>
 
                     {page === "landing" && (
